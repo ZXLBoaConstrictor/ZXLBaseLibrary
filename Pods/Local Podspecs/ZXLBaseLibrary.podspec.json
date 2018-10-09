@@ -1,0 +1,26 @@
+{
+  "name": "ZXLBaseLibrary",
+  "version": "1.0.1",
+  "summary": "基础组件",
+  "homepage": "https://github.com/ZXLBoaConstrictor",
+  "license": "MIT",
+  "authors": {
+    "zhangxiaolong": "244061043@qq.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/ZXLBoaConstrictor/ZXLBaseLibrary.git",
+    "tag": "1.0.1"
+  },
+  "source_files": "ZXLBaseLibrary/Classes/*.{h,m}",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
+  "requires_arc": true,
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-w"
+  }
+}

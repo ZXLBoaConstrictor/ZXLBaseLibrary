@@ -1,0 +1,16 @@
+PODS:
+  - ZXLBaseLibrary (1.0.1)
+
+DEPENDENCIES:
+  - ZXLBaseLibrary (from `./ZXLBaseLibrary.podspec`)
+
+EXTERNAL SOURCES:
+  ZXLBaseLibrary:
+    :path: "./ZXLBaseLibrary.podspec"
+
+SPEC CHECKSUMS:
+  ZXLBaseLibrary: a5eb730e4a5b3201d9316a82aa3b36b941df7de5
+
+PODFILE CHECKSUM: c32e4913cb859b3684dea04935f731ec998477f3
+
+COCOAPODS: 1.5.3
