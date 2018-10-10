@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'ZXLSetting' do |ss|
       ss.source_files = 'ZXLBaseLibrary/Classes/Setting/*.{h,m}'
+      ss.dependency 'ZXLBaseLibrary/ZXLExtension'
   end
 
   s.frameworks = 'UIKit','Foundation'

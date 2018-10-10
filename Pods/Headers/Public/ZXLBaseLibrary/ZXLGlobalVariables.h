@@ -1,0 +1,1 @@
+../../../../ZXLBaseLibrary/Classes/Setting/ZXLGlobalVariables.h

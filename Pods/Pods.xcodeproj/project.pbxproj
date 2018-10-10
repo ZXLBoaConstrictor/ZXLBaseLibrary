@@ -7,49 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		027F49440E4D25DCEEE641C82A75C561 /* NSString+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D72ED909CE82A2DC9F50E75851CB4CC /* NSString+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		195FA3471EE532DC3E99FD10CE9215FC /* UIColor+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2807D42B8EF3054AC7A64E33A71E7D9 /* UIColor+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		19CD9A6725344F336CF891D434F3F871 /* NSObject+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 766E939A71D669C7375BE00712C29DE9 /* NSObject+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		01C6A17D33C8D725BE90C13F78922C0D /* ZXLUtilsFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CCC65B6C0A86815796DB3F0B5193E /* ZXLUtilsFunction.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		02A110EE22983D7E3D7650533A6761DD /* NSArray+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = BFF2CF96C82295142FF3ED65F38977A1 /* NSArray+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		03FAD6D68BBA36C0F0CB7E4C399C426B /* NSArray+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCE260B2E19123EFBCE574648FF6B5 /* NSArray+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		07457FFEBEAB06358C661204B571B2BC /* UIImageView+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 77556FD05D545751B8425B78A664A105 /* UIImageView+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		083F384009CF5F19FB7568CAAA73074C /* NSString+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EC538C40F4FB7CD0C6ED19A674798278 /* NSString+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		09E9D8B878E6A6DE639805135EF94CD7 /* NSString+Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D480DCF8ACFB3FC6634C1E700890EB /* NSString+Route.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0E631F8EC6602EE7C8FED66EB9D0347B /* UIView+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0F1053BF4790D6F1844278D55A8F75 /* UIView+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0E79612D0582207274653DA8B1C4C647 /* UIView+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C9EC577D0B9FD5A3DAAF5BAE0C4A9C59 /* UIView+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0F4CDCAF5D2A8AB742B77CECECF2CFB5 /* UIButton+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EB2B38D2DA580AB698C17BE9282E92 /* UIButton+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1C23DAD90817B00BC465A0E5E1379D51 /* ZXLSettingModule.h in Headers */ = {isa = PBXBuildFile; fileRef = ECC1960542CEF1928AEC2D25EAFBBA04 /* ZXLSettingModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1CB5510DCDD59E63A3045B4666636A3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		280F8E5CFD75EDD8292E41408F5E13B7 /* ZXLPhoneInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3204BFBA9541A24362533DFE365040 /* ZXLPhoneInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2EF079030E089AEFF27C8D0909F4EC51 /* ZXLRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 789C7697817C2BD5E339BCA3066DDFB2 /* ZXLRouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2F5871B187844143E0C68C8EF5E47B86 /* NSArray+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 086C1A55F5BAAFAC056770E61081E9F2 /* NSArray+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2F7E60BA658D967729A0383BC02A91F3 /* NSString+Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F45B0960D1B56CB9CD310D5965222A /* NSString+Route.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		320699AE4EAA382D7B2EE7F0EACC2390 /* UIButton+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA96EE60D98B0D0EED934A7591ACE7F /* UIButton+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		328601D6230A521147BCA9FAE25E5C5C /* ZXLServerAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2472EA1428515696BE9C075E9347A /* ZXLServerAddress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3754DB61F5E69FD3B9AB338DD2EAE7A6 /* UIImageView+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0E85F7D0C014CE92C8C9162ABE07E /* UIImageView+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3D49415D2691BA04EB22571B7180B396 /* ZXLUtilsFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 253F6D97160DC6DAE2DB6FEE8C1E6034 /* ZXLUtilsFunction.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		62D910B4A4F89B0F627F01826184A72E /* UIView+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = ABD0DB00A5577248DB52B2EE125785F9 /* UIView+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		66E1268FBD21B6CACEB029829FC75670 /* UIViewController+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = D275F4551528F40506C33600B8742A0F /* UIViewController+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6C3E6524A2E2DA37732664D3C9AA9D99 /* UIImage+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 117A2DB8932401107D6549F4261FCE01 /* UIImage+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6D3A022C099D76B4E5F46AC401993197 /* NSDate+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = DFDE5BEB03443E5B1DAA1F5355BE77FE /* NSDate+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		725B9CB38698654E2875C5415614D648 /* NSString+Route.h in Headers */ = {isa = PBXBuildFile; fileRef = F7AE00AD0475C212AF75AEEE5A752F9C /* NSString+Route.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7361215B3F36822C75D1173EB6C79B0D /* ZXLUtilsModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F5623DE0FED1F5E3285327FD9696966 /* ZXLUtilsModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7445650115CF28AC8594063938DEA281 /* NSDate+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B2AC8489A35B541AF9C0A1CBD385A9 /* NSDate+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8ADAC4F49230C90056AE3E3D81D39A70 /* ZXLResourceAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = A63FC0171448148F2FF94105E6664AC7 /* ZXLResourceAddress.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9D7E8332D862A4B43D28FCAF55278C43 /* ZXLUtilsFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = BA94577FAA90F84DC81FE2F35CCE6FA0 /* ZXLUtilsFunction.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9F7006B3951C229696F9A2ED0C55FD98 /* ZXLResourceAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE10C74B110744E9917D5FDDB1F22EB /* ZXLResourceAddress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A16D5382DD4E857FA1F1C4F35A210BFF /* NSArray+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 84911A080447B053C491E99DCD58711C /* NSArray+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A4876BFBF6269A1345AD1D0517991E32 /* ZXLBaseLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDAA6ECC89B91AE242A340CE7BC0486 /* ZXLBaseLibrary-dummy.m */; };
-		AA2579E2017E6CE7A7A4B83E4A6D0E64 /* ZXLRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F15BF4E2C9D16EFB47AB55F980EF6C /* ZXLRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AAE0B21102267A77EFF914FC41CF2CB7 /* ZXLPhoneInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E6E6B7F0D9500E79CDBE8BBA91D080B7 /* ZXLPhoneInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AEAAADDA6E2CBB7EBF36E7D3F7B371FF /* ZXLUtilsDefined.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D047FC3CDCF729F3303A037BDD06F97 /* ZXLUtilsDefined.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B0250CA38CFBF3D605EE84232DB34B07 /* UIImageView+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = ECADA0E21C9EDD03C9F138F72D5A90C6 /* UIImageView+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B314752FDF94DA0A5DCC7DFABADF8D4E /* UIImage+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD0D6E55C7CFD4D8BB1A807FABE0534 /* UIImage+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BB6C3439D049AF36BBE55C347C81A412 /* ZXLExtensionResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5ACFC6AFDCEF9D01EC4C81F560CB89 /* ZXLExtensionResource.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C5234F511A4BC28FCA0367C580818452 /* ZXLServerAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 48532A0812B9118E77E82D4F5999033E /* ZXLServerAddress.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1EE827A06C9318ADD476CCF99E223B6E /* ZXLSettingDefined.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B4DB8CE4F334AC11B867BE6BB1A6B50 /* ZXLSettingDefined.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2BB1EEDEED4E8F114B0837773B4DFCED /* ZXLProgramSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E97EA9E9E778E39BA6815BD675E019F /* ZXLProgramSetting.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2EF266DC6EE47593BEC2D79AB99A731D /* ZXLExtensionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 37261F33AAA51AF96C8770D7F76350E1 /* ZXLExtensionModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		348C5FF07448990F90A89E96AEB45BAC /* UIColor+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A107A8CC84CF3AB56CEDF1292B6F21 /* UIColor+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3500DCAA7F2AC86DA9F1BDD13A19FC0C /* NSDate+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F71947732A2BF6BCBF16555050C06C5A /* NSDate+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3CEBAC778685D1411A792D3C8653C1C7 /* ZXLRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 102A0A6ACEC4AB5D729AAB2268EC6D5D /* ZXLRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4850A0FF0A40C938974BB4374C60A1C4 /* ZXLBaseLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A9128B11677DC458360B07EC6CAB8E /* ZXLBaseLibrary-dummy.m */; };
+		4CA83CCEA42B04EA15C490F606EBE456 /* ZXLResourceAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF720FBADCE1715AF4862CC126FCE2F /* ZXLResourceAddress.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4FF0A8A45EA25C58FC79F44D31B1F356 /* ZXLGlobalVariables.h in Headers */ = {isa = PBXBuildFile; fileRef = 29EB6FFC9C8B526D15E20B89561FE4EB /* ZXLGlobalVariables.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		50F411E3ABDECDDE691ECAC6726D5EC7 /* ZXLPhoneInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C03EE20E1CEA67B38EF209A9FEAE36E7 /* ZXLPhoneInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		52DAAA856B07AB5D2E950F5AC5039769 /* UIImage+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD7E12F47EF2C15CA07C0C3DF915D8F /* UIImage+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5475BE7B482490A4F087CD4AB1F68902 /* NSDate+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3EA4A0F9C2C69003982E4F388E28D6 /* NSDate+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		57F2FACE70D51727E66B7AAAC075F6E1 /* NSString+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 314257C5248D87B34F770648640C5F47 /* NSString+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		587501CD7CA9925D2F32F601D4BB5C3D /* ZXLRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2850CCE6835DC3DF263CF4FA4F46 /* ZXLRouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5B74B7D485205E20C3D3BF198262808E /* UIImageView+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 772C1EDEE1CB5709EBC5262FBA2D7B40 /* UIImageView+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5C0AE957B491A3CD513829526C6307D5 /* NSDictionary+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C6A7DCDB61EC7861FE02DC285E8C0D /* NSDictionary+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5FE050B9BA4FEEC83BBC5B357D41ADCE /* ZXLUtilsFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A6A21AF4254740B096E9E4F942216D5 /* ZXLUtilsFunction.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		67E28C55A6C3755925B3AA21AFA9D53A /* ZXLUtilsModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 71EC650C7795F532EE50109E1491D50F /* ZXLUtilsModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7090DC14A7DA74FC8F97FA6E88DEC6A4 /* NSObject+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ABB596343C94B37E7D1E939E01DA8C /* NSObject+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		88D0F62CE233467BB96BA7DE1ACED5DD /* UIButton+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8230EDA5FEFC40CA08B25AF7446F537D /* UIButton+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		90F755CDC7B4285EF6D2A4C753A2D81D /* ZXLResourceAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5105761C49CA35D3658289AF8A1E1F /* ZXLResourceAddress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		932AF62836B622BE7F3660BEDF9B58AC /* ZXLServerAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4ED0876D6CE646F93B9B52D70EC6AC /* ZXLServerAddress.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9570FA87406FCC4BA2EB24F789E042D9 /* UIImage+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3F35901984FA9667715233A7AA1427 /* UIImage+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		95B0D117DA3D516E9C38E5299DDC24EB /* ZXLUtilsDefined.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB35D1005E75D7D7F4511F792D76426 /* ZXLUtilsDefined.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9B8E2629DB27C5CC4A4D23AF9403C978 /* ZXLGlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = C505D38094D44FE6B6E3CF2989D49F6F /* ZXLGlobalVariables.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9F1D97BCB7AD71FAAB32E8D6AF28DF6F /* NSString+Route.h in Headers */ = {isa = PBXBuildFile; fileRef = 74EF4A1E159275EF4EAC47FA3BAB0021 /* NSString+Route.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A5BFD73DB326BC6434153E2C217BCA6B /* NSObject+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0016BAF8CA6ADBF43195365D718EB754 /* NSObject+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A97FB537BAFEDD299649BC01C6170F51 /* ZXLServerAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD7B6912240B10456C1197349DC4670 /* ZXLServerAddress.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA6E254E3CAF880189C34FA081EC2AE1 /* UIViewController+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 650F262D7F249620CB72B9560E68FA7C /* UIViewController+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA9E44E2F807CD4F4FC3F3271CB557FF /* ZXLSettingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 8089650C537BE79EDD4D9DBB0B8C1415 /* ZXLSettingFunction.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B310DAA277AD45417B283EAA88DDA362 /* ZXLExtensionResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F7D2FF6F7201EFE862A9796D4643AF /* ZXLExtensionResource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B35D44D9C6219730D354BAE7DF05C9A9 /* ZXLExtensionResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4B48EE39BFC9A609D82902310C3C8 /* ZXLExtensionResource.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B54E8C36C70234D2A299E85189E7465E /* ZXLPhoneInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048EBB85AE502DDED1D1B031C7CCFEC /* ZXLPhoneInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C0FA396BEBE3CDDF683799261B7318AA /* UIColor+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 51C38D1A4D9202F2D2A548A384F7EE2F /* UIColor+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C62D44A047CDF6B22C320968659FF1F4 /* Pods-ZXLBaseLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A14937BBAB058477E9840D60F3CBB92 /* Pods-ZXLBaseLibrary-dummy.m */; };
-		D05B3F75D3081FF9CB160F02210DF565 /* NSDictionary+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB0162FC41399DA257AD48C441E99AD /* NSDictionary+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D5C27F4E3722C52C5E307C8218B5D560 /* NSDictionary+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8E58DA5B37AD454F9F6F409BF3ACF7 /* NSDictionary+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D7579938269A375E9927BEE4F999A3DB /* UIButton+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B928705315904DD7E642DA950690A0B /* UIButton+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E0D0B78524306F6699AF580BA24B67B5 /* UIView+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD230A3FE3663496FA026E8A8140968 /* UIView+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EA3A90E0DDAE21FA8697BAF29F3CC12E /* ZXLExtensionResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE81E48A596446E2713E58C8C3855BB /* ZXLExtensionResource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		ECDDD0CFECB8ADB9C5703D6EFC37BA30 /* NSString+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F869FA68EAA2271A0B0528BE07EBED96 /* NSString+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F589E65EAC4DF4C8E6159CF7631B7EDD /* NSObject+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CDDC21AF22DC2870F3B59014EED1CD /* NSObject+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F718CF9D77BB73DF7635FBDDB080D1BA /* UIViewController+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 555F9A131BD846DA6CED25AA6A5BAA74 /* UIViewController+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C965BB9EC6980BFFE9824BCB796F3DB6 /* ZXLSettingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 16333D04EF11703325527CBEBED855F4 /* ZXLSettingFunction.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CE605E7E64E2846CF51F063ABDCBA6CB /* NSDictionary+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BE6F03EE7BD1F33D999A10CA033450 /* NSDictionary+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EDD6F57BA326B6951C9D6DCEA746276F /* ZXLProgramSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CB572F0E2D44642BC845E18D9F1FC8DC /* ZXLProgramSetting.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FAA11411D0E34A7252A898E5EC5617E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
-		FD25E1A887199313250BEECFEB9E73E9 /* UIColor+ZXLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 37B7490993E431786B073D3EF8A94FB9 /* UIColor+ZXLExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FF6EFE81AE92B9E367D835FB6410E9E8 /* ZXLExtensionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 5642B1093D973E6EF6C5E2B9BFA8C62D /* ZXLExtensionModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FBD2BA97FF2D7016220C22E96A25E7C0 /* UIViewController+ZXLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2BCBEF8FECF702D1CDD2670D9D90D /* UIViewController+ZXLExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,63 +71,71 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03F15BF4E2C9D16EFB47AB55F980EF6C /* ZXLRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLRouter.h; path = ZXLBaseLibrary/Classes/Router/ZXLRouter.h; sourceTree = "<group>"; };
-		05F013AD6B975C3033ED6859DEEAC3E0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		086C1A55F5BAAFAC056770E61081E9F2 /* NSArray+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSArray+ZXLExtension.m"; sourceTree = "<group>"; };
-		117A2DB8932401107D6549F4261FCE01 /* UIImage+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIImage+ZXLExtension.m"; sourceTree = "<group>"; };
+		0016BAF8CA6ADBF43195365D718EB754 /* NSObject+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSObject+ZXLExtension.h"; sourceTree = "<group>"; };
+		0B4DB8CE4F334AC11B867BE6BB1A6B50 /* ZXLSettingDefined.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLSettingDefined.h; path = ZXLBaseLibrary/Classes/Setting/ZXLSettingDefined.h; sourceTree = "<group>"; };
+		102A0A6ACEC4AB5D729AAB2268EC6D5D /* ZXLRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLRouter.h; path = ZXLBaseLibrary/Classes/Router/ZXLRouter.h; sourceTree = "<group>"; };
+		1048EBB85AE502DDED1D1B031C7CCFEC /* ZXLPhoneInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLPhoneInfo.m; path = ZXLBaseLibrary/Classes/Utils/ZXLPhoneInfo.m; sourceTree = "<group>"; };
+		15C6A7DCDB61EC7861FE02DC285E8C0D /* NSDictionary+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSDictionary+ZXLExtension.m"; sourceTree = "<group>"; };
+		16333D04EF11703325527CBEBED855F4 /* ZXLSettingFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLSettingFunction.m; path = ZXLBaseLibrary/Classes/Setting/ZXLSettingFunction.m; sourceTree = "<group>"; };
+		1764891C4B2035144C27CD22C9551EBD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1BD7E12F47EF2C15CA07C0C3DF915D8F /* UIImage+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIImage+ZXLExtension.m"; sourceTree = "<group>"; };
+		1F3EA4A0F9C2C69003982E4F388E28D6 /* NSDate+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSDate+ZXLExtension.h"; sourceTree = "<group>"; };
+		1F3F35901984FA9667715233A7AA1427 /* UIImage+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIImage+ZXLExtension.h"; sourceTree = "<group>"; };
+		1FD7B6912240B10456C1197349DC4670 /* ZXLServerAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLServerAddress.h; path = ZXLBaseLibrary/Classes/Utils/ZXLServerAddress.h; sourceTree = "<group>"; };
 		2198D1020FAF5EA665991244C334C19E /* Pods-ZXLBaseLibrary-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZXLBaseLibrary-acknowledgements.plist"; sourceTree = "<group>"; };
-		253F6D97160DC6DAE2DB6FEE8C1E6034 /* ZXLUtilsFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLUtilsFunction.h; path = ZXLBaseLibrary/Classes/Utils/ZXLUtilsFunction.h; sourceTree = "<group>"; };
 		27A1E48E69929BFDDA56C32809841E1E /* libPods-ZXLBaseLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ZXLBaseLibrary.a"; path = "libPods-ZXLBaseLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BB0162FC41399DA257AD48C441E99AD /* NSDictionary+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSDictionary+ZXLExtension.h"; sourceTree = "<group>"; };
-		2F3204BFBA9541A24362533DFE365040 /* ZXLPhoneInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLPhoneInfo.m; path = ZXLBaseLibrary/Classes/Utils/ZXLPhoneInfo.m; sourceTree = "<group>"; };
+		27D480DCF8ACFB3FC6634C1E700890EB /* NSString+Route.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Route.m"; path = "ZXLBaseLibrary/Classes/Router/NSString+Route.m"; sourceTree = "<group>"; };
+		29EB6FFC9C8B526D15E20B89561FE4EB /* ZXLGlobalVariables.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLGlobalVariables.h; path = ZXLBaseLibrary/Classes/Setting/ZXLGlobalVariables.h; sourceTree = "<group>"; };
+		314257C5248D87B34F770648640C5F47 /* NSString+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSString+ZXLExtension.h"; sourceTree = "<group>"; };
 		3669E7E14AF871888D5CF4555EAE2580 /* Pods-ZXLBaseLibrary-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZXLBaseLibrary-resources.sh"; sourceTree = "<group>"; };
-		37B7490993E431786B073D3EF8A94FB9 /* UIColor+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIColor+ZXLExtension.h"; sourceTree = "<group>"; };
-		3B928705315904DD7E642DA950690A0B /* UIButton+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIButton+ZXLExtension.m"; sourceTree = "<group>"; };
-		3EE0E85F7D0C014CE92C8C9162ABE07E /* UIImageView+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIImageView+ZXLExtension.m"; sourceTree = "<group>"; };
-		46B2AC8489A35B541AF9C0A1CBD385A9 /* NSDate+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSDate+ZXLExtension.m"; sourceTree = "<group>"; };
-		48532A0812B9118E77E82D4F5999033E /* ZXLServerAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLServerAddress.h; path = ZXLBaseLibrary/Classes/Utils/ZXLServerAddress.h; sourceTree = "<group>"; };
-		4900C2378EF6B6F6EA829153B866EA55 /* ZXLBaseLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ZXLBaseLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		37261F33AAA51AF96C8770D7F76350E1 /* ZXLExtensionModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLExtensionModule.h; path = ZXLBaseLibrary/Classes/Extension/ZXLExtensionModule.h; sourceTree = "<group>"; };
+		38BE6F03EE7BD1F33D999A10CA033450 /* NSDictionary+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSDictionary+ZXLExtension.h"; sourceTree = "<group>"; };
+		4A6A21AF4254740B096E9E4F942216D5 /* ZXLUtilsFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLUtilsFunction.h; path = ZXLBaseLibrary/Classes/Utils/ZXLUtilsFunction.h; sourceTree = "<group>"; };
+		4CF720FBADCE1715AF4862CC126FCE2F /* ZXLResourceAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLResourceAddress.h; path = ZXLBaseLibrary/Classes/Utils/ZXLResourceAddress.h; sourceTree = "<group>"; };
 		4CF8757DA8237288A590A896C0AC95EE /* Pods-ZXLBaseLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZXLBaseLibrary.release.xcconfig"; sourceTree = "<group>"; };
-		4D047FC3CDCF729F3303A037BDD06F97 /* ZXLUtilsDefined.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLUtilsDefined.h; path = ZXLBaseLibrary/Classes/Utils/ZXLUtilsDefined.h; sourceTree = "<group>"; };
-		53CDDC21AF22DC2870F3B59014EED1CD /* NSObject+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSObject+ZXLExtension.m"; sourceTree = "<group>"; };
-		555F9A131BD846DA6CED25AA6A5BAA74 /* UIViewController+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIViewController+ZXLExtension.m"; sourceTree = "<group>"; };
-		5642B1093D973E6EF6C5E2B9BFA8C62D /* ZXLExtensionModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLExtensionModule.h; path = ZXLBaseLibrary/Classes/Extension/ZXLExtensionModule.h; sourceTree = "<group>"; };
-		5C8E58DA5B37AD454F9F6F409BF3ACF7 /* NSDictionary+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSDictionary+ZXLExtension.m"; sourceTree = "<group>"; };
-		6F5623DE0FED1F5E3285327FD9696966 /* ZXLUtilsModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLUtilsModule.h; path = ZXLBaseLibrary/Classes/Utils/ZXLUtilsModule.h; sourceTree = "<group>"; };
-		766E939A71D669C7375BE00712C29DE9 /* NSObject+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSObject+ZXLExtension.h"; sourceTree = "<group>"; };
-		789C7697817C2BD5E339BCA3066DDFB2 /* ZXLRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLRouter.m; path = ZXLBaseLibrary/Classes/Router/ZXLRouter.m; sourceTree = "<group>"; };
-		7BE81E48A596446E2713E58C8C3855BB /* ZXLExtensionResource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLExtensionResource.h; path = ZXLBaseLibrary/Classes/Extension/ZXLExtensionResource.h; sourceTree = "<group>"; };
+		4E97EA9E9E778E39BA6815BD675E019F /* ZXLProgramSetting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLProgramSetting.h; path = ZXLBaseLibrary/Classes/Setting/ZXLProgramSetting.h; sourceTree = "<group>"; };
+		51C38D1A4D9202F2D2A548A384F7EE2F /* UIColor+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIColor+ZXLExtension.h"; sourceTree = "<group>"; };
+		62FCE260B2E19123EFBCE574648FF6B5 /* NSArray+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSArray+ZXLExtension.m"; sourceTree = "<group>"; };
+		650F262D7F249620CB72B9560E68FA7C /* UIViewController+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIViewController+ZXLExtension.h"; sourceTree = "<group>"; };
+		6B4ED0876D6CE646F93B9B52D70EC6AC /* ZXLServerAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLServerAddress.m; path = ZXLBaseLibrary/Classes/Utils/ZXLServerAddress.m; sourceTree = "<group>"; };
+		6E5105761C49CA35D3658289AF8A1E1F /* ZXLResourceAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLResourceAddress.m; path = ZXLBaseLibrary/Classes/Utils/ZXLResourceAddress.m; sourceTree = "<group>"; };
+		71EC650C7795F532EE50109E1491D50F /* ZXLUtilsModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLUtilsModule.h; path = ZXLBaseLibrary/Classes/Utils/ZXLUtilsModule.h; sourceTree = "<group>"; };
+		74E933694B9C411064A3F36B9784057B /* ZXLBaseLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZXLBaseLibrary.xcconfig; sourceTree = "<group>"; };
+		74EF4A1E159275EF4EAC47FA3BAB0021 /* NSString+Route.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Route.h"; path = "ZXLBaseLibrary/Classes/Router/NSString+Route.h"; sourceTree = "<group>"; };
+		772C1EDEE1CB5709EBC5262FBA2D7B40 /* UIImageView+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIImageView+ZXLExtension.m"; sourceTree = "<group>"; };
+		77556FD05D545751B8425B78A664A105 /* UIImageView+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIImageView+ZXLExtension.h"; sourceTree = "<group>"; };
+		79F7D2FF6F7201EFE862A9796D4643AF /* ZXLExtensionResource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLExtensionResource.h; path = ZXLBaseLibrary/Classes/Extension/ZXLExtensionResource.h; sourceTree = "<group>"; };
+		7DA2BCBEF8FECF702D1CDD2670D9D90D /* UIViewController+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIViewController+ZXLExtension.m"; sourceTree = "<group>"; };
 		7DF713A61D665B6853036708162E0B2C /* libZXLBaseLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libZXLBaseLibrary.a; path = libZXLBaseLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FD230A3FE3663496FA026E8A8140968 /* UIView+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIView+ZXLExtension.m"; sourceTree = "<group>"; };
-		83F45B0960D1B56CB9CD310D5965222A /* NSString+Route.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Route.m"; path = "ZXLBaseLibrary/Classes/Router/NSString+Route.m"; sourceTree = "<group>"; };
-		84911A080447B053C491E99DCD58711C /* NSArray+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSArray+ZXLExtension.h"; sourceTree = "<group>"; };
+		8089650C537BE79EDD4D9DBB0B8C1415 /* ZXLSettingFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLSettingFunction.h; path = ZXLBaseLibrary/Classes/Setting/ZXLSettingFunction.h; sourceTree = "<group>"; };
+		8230EDA5FEFC40CA08B25AF7446F537D /* UIButton+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIButton+ZXLExtension.h"; sourceTree = "<group>"; };
 		8A14937BBAB058477E9840D60F3CBB92 /* Pods-ZXLBaseLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZXLBaseLibrary-dummy.m"; sourceTree = "<group>"; };
-		8E12BF97E58225A1A5501E99C7E6830E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		8EB2472EA1428515696BE9C075E9347A /* ZXLServerAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLServerAddress.m; path = ZXLBaseLibrary/Classes/Utils/ZXLServerAddress.m; sourceTree = "<group>"; };
+		8AD4B48EE39BFC9A609D82902310C3C8 /* ZXLExtensionResource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLExtensionResource.m; path = ZXLBaseLibrary/Classes/Extension/ZXLExtensionResource.m; sourceTree = "<group>"; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		928CCC65B6C0A86815796DB3F0B5193E /* ZXLUtilsFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLUtilsFunction.m; path = ZXLBaseLibrary/Classes/Utils/ZXLUtilsFunction.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9A5ACFC6AFDCEF9D01EC4C81F560CB89 /* ZXLExtensionResource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLExtensionResource.m; path = ZXLBaseLibrary/Classes/Extension/ZXLExtensionResource.m; sourceTree = "<group>"; };
-		9D72ED909CE82A2DC9F50E75851CB4CC /* NSString+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSString+ZXLExtension.h"; sourceTree = "<group>"; };
-		A63FC0171448148F2FF94105E6664AC7 /* ZXLResourceAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLResourceAddress.h; path = ZXLBaseLibrary/Classes/Utils/ZXLResourceAddress.h; sourceTree = "<group>"; };
-		ABD0DB00A5577248DB52B2EE125785F9 /* UIView+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIView+ZXLExtension.h"; sourceTree = "<group>"; };
+		B1ABB596343C94B37E7D1E939E01DA8C /* NSObject+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSObject+ZXLExtension.m"; sourceTree = "<group>"; };
+		B3A9128B11677DC458360B07EC6CAB8E /* ZXLBaseLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZXLBaseLibrary-dummy.m"; sourceTree = "<group>"; };
 		B7D6047BE753291FC32093F0D064D0C4 /* Pods-ZXLBaseLibrary-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZXLBaseLibrary-frameworks.sh"; sourceTree = "<group>"; };
-		BA94577FAA90F84DC81FE2F35CCE6FA0 /* ZXLUtilsFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLUtilsFunction.m; path = ZXLBaseLibrary/Classes/Utils/ZXLUtilsFunction.m; sourceTree = "<group>"; };
 		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C2807D42B8EF3054AC7A64E33A71E7D9 /* UIColor+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIColor+ZXLExtension.m"; sourceTree = "<group>"; };
-		C7A30D3842A3EDDC77CA87432719EA6D /* ZXLBaseLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZXLBaseLibrary-prefix.pch"; sourceTree = "<group>"; };
-		CAD0D6E55C7CFD4D8BB1A807FABE0534 /* UIImage+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIImage+ZXLExtension.h"; sourceTree = "<group>"; };
-		CEA96EE60D98B0D0EED934A7591ACE7F /* UIButton+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIButton+ZXLExtension.h"; sourceTree = "<group>"; };
-		D275F4551528F40506C33600B8742A0F /* UIViewController+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIViewController+ZXLExtension.h"; sourceTree = "<group>"; };
-		DBE10C74B110744E9917D5FDDB1F22EB /* ZXLResourceAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLResourceAddress.m; path = ZXLBaseLibrary/Classes/Utils/ZXLResourceAddress.m; sourceTree = "<group>"; };
-		DE479D6AFE3F6C3BCBD92BF79A6C12C3 /* ZXLBaseLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZXLBaseLibrary.xcconfig; sourceTree = "<group>"; };
-		DFDE5BEB03443E5B1DAA1F5355BE77FE /* NSDate+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSDate+ZXLExtension.h"; sourceTree = "<group>"; };
+		BFF2CF96C82295142FF3ED65F38977A1 /* NSArray+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/NSArray+ZXLExtension.h"; sourceTree = "<group>"; };
+		C03EE20E1CEA67B38EF209A9FEAE36E7 /* ZXLPhoneInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLPhoneInfo.h; path = ZXLBaseLibrary/Classes/Utils/ZXLPhoneInfo.h; sourceTree = "<group>"; };
+		C1F15E13A21C61E713E61437DD1B0774 /* ZXLBaseLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ZXLBaseLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C505D38094D44FE6B6E3CF2989D49F6F /* ZXLGlobalVariables.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLGlobalVariables.m; path = ZXLBaseLibrary/Classes/Setting/ZXLGlobalVariables.m; sourceTree = "<group>"; };
+		C5EB2B38D2DA580AB698C17BE9282E92 /* UIButton+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIButton+ZXLExtension.m"; sourceTree = "<group>"; };
+		C9EC577D0B9FD5A3DAAF5BAE0C4A9C59 /* UIView+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIView+ZXLExtension.h"; sourceTree = "<group>"; };
+		CB572F0E2D44642BC845E18D9F1FC8DC /* ZXLProgramSetting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLProgramSetting.m; path = ZXLBaseLibrary/Classes/Setting/ZXLProgramSetting.m; sourceTree = "<group>"; };
+		D1FD2850CCE6835DC3DF263CF4FA4F46 /* ZXLRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXLRouter.m; path = ZXLBaseLibrary/Classes/Router/ZXLRouter.m; sourceTree = "<group>"; };
+		DFB35D1005E75D7D7F4511F792D76426 /* ZXLUtilsDefined.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLUtilsDefined.h; path = ZXLBaseLibrary/Classes/Utils/ZXLUtilsDefined.h; sourceTree = "<group>"; };
+		E19F352D6672E0DD2734B132AE3563AC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E27A0C2D3F44F625AD0E2BE61A4CB40B /* Pods-ZXLBaseLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZXLBaseLibrary.debug.xcconfig"; sourceTree = "<group>"; };
-		E6E6B7F0D9500E79CDBE8BBA91D080B7 /* ZXLPhoneInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLPhoneInfo.h; path = ZXLBaseLibrary/Classes/Utils/ZXLPhoneInfo.h; sourceTree = "<group>"; };
-		ECADA0E21C9EDD03C9F138F72D5A90C6 /* UIImageView+ZXLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+ZXLExtension.h"; path = "ZXLBaseLibrary/Classes/Extension/UIImageView+ZXLExtension.h"; sourceTree = "<group>"; };
+		E7A107A8CC84CF3AB56CEDF1292B6F21 /* UIColor+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIColor+ZXLExtension.m"; sourceTree = "<group>"; };
+		EC538C40F4FB7CD0C6ED19A674798278 /* NSString+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSString+ZXLExtension.m"; sourceTree = "<group>"; };
+		ECC1960542CEF1928AEC2D25EAFBBA04 /* ZXLSettingModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXLSettingModule.h; path = ZXLBaseLibrary/Classes/Setting/ZXLSettingModule.h; sourceTree = "<group>"; };
+		EE0F1053BF4790D6F1844278D55A8F75 /* UIView+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/UIView+ZXLExtension.m"; sourceTree = "<group>"; };
 		EEBEF0D45BD777E39DA7A8E3D0755FFB /* Pods-ZXLBaseLibrary-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZXLBaseLibrary-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EEDAA6ECC89B91AE242A340CE7BC0486 /* ZXLBaseLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZXLBaseLibrary-dummy.m"; sourceTree = "<group>"; };
-		F7AE00AD0475C212AF75AEEE5A752F9C /* NSString+Route.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Route.h"; path = "ZXLBaseLibrary/Classes/Router/NSString+Route.h"; sourceTree = "<group>"; };
-		F869FA68EAA2271A0B0528BE07EBED96 /* NSString+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSString+ZXLExtension.m"; sourceTree = "<group>"; };
+		F4DBBE928600E1582986F1B1F377899F /* ZXLBaseLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZXLBaseLibrary-prefix.pch"; sourceTree = "<group>"; };
+		F71947732A2BF6BCBF16555050C06C5A /* NSDate+ZXLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+ZXLExtension.m"; path = "ZXLBaseLibrary/Classes/Extension/NSDate+ZXLExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,17 +158,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03CE9245CD9E3EED44E75341FFD7B537 /* ZXLRouter */ = {
-			isa = PBXGroup;
-			children = (
-				F7AE00AD0475C212AF75AEEE5A752F9C /* NSString+Route.h */,
-				83F45B0960D1B56CB9CD310D5965222A /* NSString+Route.m */,
-				03F15BF4E2C9D16EFB47AB55F980EF6C /* ZXLRouter.h */,
-				789C7697817C2BD5E339BCA3066DDFB2 /* ZXLRouter.m */,
-			);
-			name = ZXLRouter;
-			sourceTree = "<group>";
-		};
 		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,31 +167,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		195E5A5B71648F670CDF639C42A5A12D /* ZXLUtils */ = {
+		1DE9FAB7E99744D71C778453ED46AC3F /* ZXLRouter */ = {
 			isa = PBXGroup;
 			children = (
-				E6E6B7F0D9500E79CDBE8BBA91D080B7 /* ZXLPhoneInfo.h */,
-				2F3204BFBA9541A24362533DFE365040 /* ZXLPhoneInfo.m */,
-				A63FC0171448148F2FF94105E6664AC7 /* ZXLResourceAddress.h */,
-				DBE10C74B110744E9917D5FDDB1F22EB /* ZXLResourceAddress.m */,
-				48532A0812B9118E77E82D4F5999033E /* ZXLServerAddress.h */,
-				8EB2472EA1428515696BE9C075E9347A /* ZXLServerAddress.m */,
-				4D047FC3CDCF729F3303A037BDD06F97 /* ZXLUtilsDefined.h */,
-				253F6D97160DC6DAE2DB6FEE8C1E6034 /* ZXLUtilsFunction.h */,
-				BA94577FAA90F84DC81FE2F35CCE6FA0 /* ZXLUtilsFunction.m */,
-				6F5623DE0FED1F5E3285327FD9696966 /* ZXLUtilsModule.h */,
+				74EF4A1E159275EF4EAC47FA3BAB0021 /* NSString+Route.h */,
+				27D480DCF8ACFB3FC6634C1E700890EB /* NSString+Route.m */,
+				102A0A6ACEC4AB5D729AAB2268EC6D5D /* ZXLRouter.h */,
+				D1FD2850CCE6835DC3DF263CF4FA4F46 /* ZXLRouter.m */,
 			);
-			name = ZXLUtils;
-			sourceTree = "<group>";
-		};
-		201A8034BB080E2C0C4E957432BB1A29 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				8E12BF97E58225A1A5501E99C7E6830E /* LICENSE */,
-				05F013AD6B975C3033ED6859DEEAC3E0 /* README.md */,
-				4900C2378EF6B6F6EA829153B866EA55 /* ZXLBaseLibrary.podspec */,
-			);
-			name = Pod;
+			name = ZXLRouter;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -195,6 +184,60 @@
 				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43EA65D08518951ACA8D302E61A84C7A /* ZXLBaseLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				AF75EB6115D2023ED4D3F3DFBEB46FC9 /* Pod */,
+				F130FAB6F5B7DEE5B82A3517282A6AF0 /* Support Files */,
+				5EA8D40D22150B31790F5B50BA4988D1 /* ZXLExtension */,
+				1DE9FAB7E99744D71C778453ED46AC3F /* ZXLRouter */,
+				8088F6E6FD49DE14B7681487DDA65455 /* ZXLSetting */,
+				EBAD56E271E8353872294B2D02C2CC96 /* ZXLUtils */,
+			);
+			name = ZXLBaseLibrary;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5EA8D40D22150B31790F5B50BA4988D1 /* ZXLExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BFF2CF96C82295142FF3ED65F38977A1 /* NSArray+ZXLExtension.h */,
+				62FCE260B2E19123EFBCE574648FF6B5 /* NSArray+ZXLExtension.m */,
+				1F3EA4A0F9C2C69003982E4F388E28D6 /* NSDate+ZXLExtension.h */,
+				F71947732A2BF6BCBF16555050C06C5A /* NSDate+ZXLExtension.m */,
+				38BE6F03EE7BD1F33D999A10CA033450 /* NSDictionary+ZXLExtension.h */,
+				15C6A7DCDB61EC7861FE02DC285E8C0D /* NSDictionary+ZXLExtension.m */,
+				0016BAF8CA6ADBF43195365D718EB754 /* NSObject+ZXLExtension.h */,
+				B1ABB596343C94B37E7D1E939E01DA8C /* NSObject+ZXLExtension.m */,
+				314257C5248D87B34F770648640C5F47 /* NSString+ZXLExtension.h */,
+				EC538C40F4FB7CD0C6ED19A674798278 /* NSString+ZXLExtension.m */,
+				8230EDA5FEFC40CA08B25AF7446F537D /* UIButton+ZXLExtension.h */,
+				C5EB2B38D2DA580AB698C17BE9282E92 /* UIButton+ZXLExtension.m */,
+				51C38D1A4D9202F2D2A548A384F7EE2F /* UIColor+ZXLExtension.h */,
+				E7A107A8CC84CF3AB56CEDF1292B6F21 /* UIColor+ZXLExtension.m */,
+				1F3F35901984FA9667715233A7AA1427 /* UIImage+ZXLExtension.h */,
+				1BD7E12F47EF2C15CA07C0C3DF915D8F /* UIImage+ZXLExtension.m */,
+				77556FD05D545751B8425B78A664A105 /* UIImageView+ZXLExtension.h */,
+				772C1EDEE1CB5709EBC5262FBA2D7B40 /* UIImageView+ZXLExtension.m */,
+				C9EC577D0B9FD5A3DAAF5BAE0C4A9C59 /* UIView+ZXLExtension.h */,
+				EE0F1053BF4790D6F1844278D55A8F75 /* UIView+ZXLExtension.m */,
+				650F262D7F249620CB72B9560E68FA7C /* UIViewController+ZXLExtension.h */,
+				7DA2BCBEF8FECF702D1CDD2670D9D90D /* UIViewController+ZXLExtension.m */,
+				37261F33AAA51AF96C8770D7F76350E1 /* ZXLExtensionModule.h */,
+				79F7D2FF6F7201EFE862A9796D4643AF /* ZXLExtensionResource.h */,
+				8AD4B48EE39BFC9A609D82902310C3C8 /* ZXLExtensionResource.m */,
+			);
+			name = ZXLExtension;
+			sourceTree = "<group>";
+		};
+		75333309DCBD60565306511A90383262 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43EA65D08518951ACA8D302E61A84C7A /* ZXLBaseLibrary */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		75754D42ACE195B71E439F06805C22FF /* Pods-ZXLBaseLibrary */ = {
@@ -216,19 +259,36 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				AFEA178BB449C08910F4FC56996047E0 /* Development Pods */,
+				75333309DCBD60565306511A90383262 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				DD86E3BCD2CA8A7FE63A77A0DFCB77BB /* Products */,
 				B7A38F6CBB7A9849721183812A5AACFB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		AFEA178BB449C08910F4FC56996047E0 /* Development Pods */ = {
+		8088F6E6FD49DE14B7681487DDA65455 /* ZXLSetting */ = {
 			isa = PBXGroup;
 			children = (
-				F6ED427C2AADBAC5FA1830E4A43008CC /* ZXLBaseLibrary */,
+				29EB6FFC9C8B526D15E20B89561FE4EB /* ZXLGlobalVariables.h */,
+				C505D38094D44FE6B6E3CF2989D49F6F /* ZXLGlobalVariables.m */,
+				4E97EA9E9E778E39BA6815BD675E019F /* ZXLProgramSetting.h */,
+				CB572F0E2D44642BC845E18D9F1FC8DC /* ZXLProgramSetting.m */,
+				0B4DB8CE4F334AC11B867BE6BB1A6B50 /* ZXLSettingDefined.h */,
+				8089650C537BE79EDD4D9DBB0B8C1415 /* ZXLSettingFunction.h */,
+				16333D04EF11703325527CBEBED855F4 /* ZXLSettingFunction.m */,
+				ECC1960542CEF1928AEC2D25EAFBBA04 /* ZXLSettingModule.h */,
 			);
-			name = "Development Pods";
+			name = ZXLSetting;
+			sourceTree = "<group>";
+		};
+		AF75EB6115D2023ED4D3F3DFBEB46FC9 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E19F352D6672E0DD2734B132AE3563AC /* LICENSE */,
+				1764891C4B2035144C27CD22C9551EBD /* README.md */,
+				C1F15E13A21C61E713E61437DD1B0774 /* ZXLBaseLibrary.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		B7A38F6CBB7A9849721183812A5AACFB /* Targets Support Files */ = {
@@ -237,17 +297,6 @@
 				75754D42ACE195B71E439F06805C22FF /* Pods-ZXLBaseLibrary */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		BB8C86386B4766B06642524C418DD581 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DE479D6AFE3F6C3BCBD92BF79A6C12C3 /* ZXLBaseLibrary.xcconfig */,
-				EEDAA6ECC89B91AE242A340CE7BC0486 /* ZXLBaseLibrary-dummy.m */,
-				C7A30D3842A3EDDC77CA87432719EA6D /* ZXLBaseLibrary-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/ZXLBaseLibrary";
 			sourceTree = "<group>";
 		};
 		DD86E3BCD2CA8A7FE63A77A0DFCB77BB /* Products */ = {
@@ -259,79 +308,67 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F3CBD867092518A07E011D6B1AB8A1B1 /* ZXLExtension */ = {
+		EBAD56E271E8353872294B2D02C2CC96 /* ZXLUtils */ = {
 			isa = PBXGroup;
 			children = (
-				84911A080447B053C491E99DCD58711C /* NSArray+ZXLExtension.h */,
-				086C1A55F5BAAFAC056770E61081E9F2 /* NSArray+ZXLExtension.m */,
-				DFDE5BEB03443E5B1DAA1F5355BE77FE /* NSDate+ZXLExtension.h */,
-				46B2AC8489A35B541AF9C0A1CBD385A9 /* NSDate+ZXLExtension.m */,
-				2BB0162FC41399DA257AD48C441E99AD /* NSDictionary+ZXLExtension.h */,
-				5C8E58DA5B37AD454F9F6F409BF3ACF7 /* NSDictionary+ZXLExtension.m */,
-				766E939A71D669C7375BE00712C29DE9 /* NSObject+ZXLExtension.h */,
-				53CDDC21AF22DC2870F3B59014EED1CD /* NSObject+ZXLExtension.m */,
-				9D72ED909CE82A2DC9F50E75851CB4CC /* NSString+ZXLExtension.h */,
-				F869FA68EAA2271A0B0528BE07EBED96 /* NSString+ZXLExtension.m */,
-				CEA96EE60D98B0D0EED934A7591ACE7F /* UIButton+ZXLExtension.h */,
-				3B928705315904DD7E642DA950690A0B /* UIButton+ZXLExtension.m */,
-				37B7490993E431786B073D3EF8A94FB9 /* UIColor+ZXLExtension.h */,
-				C2807D42B8EF3054AC7A64E33A71E7D9 /* UIColor+ZXLExtension.m */,
-				CAD0D6E55C7CFD4D8BB1A807FABE0534 /* UIImage+ZXLExtension.h */,
-				117A2DB8932401107D6549F4261FCE01 /* UIImage+ZXLExtension.m */,
-				ECADA0E21C9EDD03C9F138F72D5A90C6 /* UIImageView+ZXLExtension.h */,
-				3EE0E85F7D0C014CE92C8C9162ABE07E /* UIImageView+ZXLExtension.m */,
-				ABD0DB00A5577248DB52B2EE125785F9 /* UIView+ZXLExtension.h */,
-				7FD230A3FE3663496FA026E8A8140968 /* UIView+ZXLExtension.m */,
-				D275F4551528F40506C33600B8742A0F /* UIViewController+ZXLExtension.h */,
-				555F9A131BD846DA6CED25AA6A5BAA74 /* UIViewController+ZXLExtension.m */,
-				5642B1093D973E6EF6C5E2B9BFA8C62D /* ZXLExtensionModule.h */,
-				7BE81E48A596446E2713E58C8C3855BB /* ZXLExtensionResource.h */,
-				9A5ACFC6AFDCEF9D01EC4C81F560CB89 /* ZXLExtensionResource.m */,
+				C03EE20E1CEA67B38EF209A9FEAE36E7 /* ZXLPhoneInfo.h */,
+				1048EBB85AE502DDED1D1B031C7CCFEC /* ZXLPhoneInfo.m */,
+				4CF720FBADCE1715AF4862CC126FCE2F /* ZXLResourceAddress.h */,
+				6E5105761C49CA35D3658289AF8A1E1F /* ZXLResourceAddress.m */,
+				1FD7B6912240B10456C1197349DC4670 /* ZXLServerAddress.h */,
+				6B4ED0876D6CE646F93B9B52D70EC6AC /* ZXLServerAddress.m */,
+				DFB35D1005E75D7D7F4511F792D76426 /* ZXLUtilsDefined.h */,
+				4A6A21AF4254740B096E9E4F942216D5 /* ZXLUtilsFunction.h */,
+				928CCC65B6C0A86815796DB3F0B5193E /* ZXLUtilsFunction.m */,
+				71EC650C7795F532EE50109E1491D50F /* ZXLUtilsModule.h */,
 			);
-			name = ZXLExtension;
+			name = ZXLUtils;
 			sourceTree = "<group>";
 		};
-		F6ED427C2AADBAC5FA1830E4A43008CC /* ZXLBaseLibrary */ = {
+		F130FAB6F5B7DEE5B82A3517282A6AF0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				201A8034BB080E2C0C4E957432BB1A29 /* Pod */,
-				BB8C86386B4766B06642524C418DD581 /* Support Files */,
-				F3CBD867092518A07E011D6B1AB8A1B1 /* ZXLExtension */,
-				03CE9245CD9E3EED44E75341FFD7B537 /* ZXLRouter */,
-				195E5A5B71648F670CDF639C42A5A12D /* ZXLUtils */,
+				74E933694B9C411064A3F36B9784057B /* ZXLBaseLibrary.xcconfig */,
+				B3A9128B11677DC458360B07EC6CAB8E /* ZXLBaseLibrary-dummy.m */,
+				F4DBBE928600E1582986F1B1F377899F /* ZXLBaseLibrary-prefix.pch */,
 			);
-			name = ZXLBaseLibrary;
-			path = ..;
+			name = "Support Files";
+			path = "Pods/Target Support Files/ZXLBaseLibrary";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6F19AD46E91E03D0A8E525A32572FB06 /* Headers */ = {
+		7B45D3C5474ACFFEF0EED1448239233F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A16D5382DD4E857FA1F1C4F35A210BFF /* NSArray+ZXLExtension.h in Headers */,
-				6D3A022C099D76B4E5F46AC401993197 /* NSDate+ZXLExtension.h in Headers */,
-				D05B3F75D3081FF9CB160F02210DF565 /* NSDictionary+ZXLExtension.h in Headers */,
-				19CD9A6725344F336CF891D434F3F871 /* NSObject+ZXLExtension.h in Headers */,
-				725B9CB38698654E2875C5415614D648 /* NSString+Route.h in Headers */,
-				027F49440E4D25DCEEE641C82A75C561 /* NSString+ZXLExtension.h in Headers */,
-				320699AE4EAA382D7B2EE7F0EACC2390 /* UIButton+ZXLExtension.h in Headers */,
-				FD25E1A887199313250BEECFEB9E73E9 /* UIColor+ZXLExtension.h in Headers */,
-				B314752FDF94DA0A5DCC7DFABADF8D4E /* UIImage+ZXLExtension.h in Headers */,
-				B0250CA38CFBF3D605EE84232DB34B07 /* UIImageView+ZXLExtension.h in Headers */,
-				62D910B4A4F89B0F627F01826184A72E /* UIView+ZXLExtension.h in Headers */,
-				66E1268FBD21B6CACEB029829FC75670 /* UIViewController+ZXLExtension.h in Headers */,
-				FF6EFE81AE92B9E367D835FB6410E9E8 /* ZXLExtensionModule.h in Headers */,
-				EA3A90E0DDAE21FA8697BAF29F3CC12E /* ZXLExtensionResource.h in Headers */,
-				AAE0B21102267A77EFF914FC41CF2CB7 /* ZXLPhoneInfo.h in Headers */,
-				8ADAC4F49230C90056AE3E3D81D39A70 /* ZXLResourceAddress.h in Headers */,
-				AA2579E2017E6CE7A7A4B83E4A6D0E64 /* ZXLRouter.h in Headers */,
-				C5234F511A4BC28FCA0367C580818452 /* ZXLServerAddress.h in Headers */,
-				AEAAADDA6E2CBB7EBF36E7D3F7B371FF /* ZXLUtilsDefined.h in Headers */,
-				3D49415D2691BA04EB22571B7180B396 /* ZXLUtilsFunction.h in Headers */,
-				7361215B3F36822C75D1173EB6C79B0D /* ZXLUtilsModule.h in Headers */,
+				02A110EE22983D7E3D7650533A6761DD /* NSArray+ZXLExtension.h in Headers */,
+				5475BE7B482490A4F087CD4AB1F68902 /* NSDate+ZXLExtension.h in Headers */,
+				CE605E7E64E2846CF51F063ABDCBA6CB /* NSDictionary+ZXLExtension.h in Headers */,
+				A5BFD73DB326BC6434153E2C217BCA6B /* NSObject+ZXLExtension.h in Headers */,
+				9F1D97BCB7AD71FAAB32E8D6AF28DF6F /* NSString+Route.h in Headers */,
+				57F2FACE70D51727E66B7AAAC075F6E1 /* NSString+ZXLExtension.h in Headers */,
+				88D0F62CE233467BB96BA7DE1ACED5DD /* UIButton+ZXLExtension.h in Headers */,
+				C0FA396BEBE3CDDF683799261B7318AA /* UIColor+ZXLExtension.h in Headers */,
+				9570FA87406FCC4BA2EB24F789E042D9 /* UIImage+ZXLExtension.h in Headers */,
+				07457FFEBEAB06358C661204B571B2BC /* UIImageView+ZXLExtension.h in Headers */,
+				0E79612D0582207274653DA8B1C4C647 /* UIView+ZXLExtension.h in Headers */,
+				AA6E254E3CAF880189C34FA081EC2AE1 /* UIViewController+ZXLExtension.h in Headers */,
+				2EF266DC6EE47593BEC2D79AB99A731D /* ZXLExtensionModule.h in Headers */,
+				B310DAA277AD45417B283EAA88DDA362 /* ZXLExtensionResource.h in Headers */,
+				4FF0A8A45EA25C58FC79F44D31B1F356 /* ZXLGlobalVariables.h in Headers */,
+				50F411E3ABDECDDE691ECAC6726D5EC7 /* ZXLPhoneInfo.h in Headers */,
+				2BB1EEDEED4E8F114B0837773B4DFCED /* ZXLProgramSetting.h in Headers */,
+				4CA83CCEA42B04EA15C490F606EBE456 /* ZXLResourceAddress.h in Headers */,
+				3CEBAC778685D1411A792D3C8653C1C7 /* ZXLRouter.h in Headers */,
+				A97FB537BAFEDD299649BC01C6170F51 /* ZXLServerAddress.h in Headers */,
+				1EE827A06C9318ADD476CCF99E223B6E /* ZXLSettingDefined.h in Headers */,
+				AA9E44E2F807CD4F4FC3F3271CB557FF /* ZXLSettingFunction.h in Headers */,
+				1C23DAD90817B00BC465A0E5E1379D51 /* ZXLSettingModule.h in Headers */,
+				95B0D117DA3D516E9C38E5299DDC24EB /* ZXLUtilsDefined.h in Headers */,
+				5FE050B9BA4FEEC83BBC5B357D41ADCE /* ZXLUtilsFunction.h in Headers */,
+				67E28C55A6C3755925B3AA21AFA9D53A /* ZXLUtilsModule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,8 +404,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5694AC27C59A3E792D6054D5723EA375 /* Build configuration list for PBXNativeTarget "ZXLBaseLibrary" */;
 			buildPhases = (
-				6F19AD46E91E03D0A8E525A32572FB06 /* Headers */,
-				185FCF6ACA710E047AFAB50C244204F4 /* Sources */,
+				7B45D3C5474ACFFEF0EED1448239233F /* Headers */,
+				4DD274F4BE941228C64312F5ACA831C4 /* Sources */,
 				D4C04726D83BB5201E37A5AD20241151 /* Frameworks */,
 			);
 			buildRules = (
@@ -416,29 +453,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		185FCF6ACA710E047AFAB50C244204F4 /* Sources */ = {
+		4DD274F4BE941228C64312F5ACA831C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F5871B187844143E0C68C8EF5E47B86 /* NSArray+ZXLExtension.m in Sources */,
-				7445650115CF28AC8594063938DEA281 /* NSDate+ZXLExtension.m in Sources */,
-				D5C27F4E3722C52C5E307C8218B5D560 /* NSDictionary+ZXLExtension.m in Sources */,
-				F589E65EAC4DF4C8E6159CF7631B7EDD /* NSObject+ZXLExtension.m in Sources */,
-				2F7E60BA658D967729A0383BC02A91F3 /* NSString+Route.m in Sources */,
-				ECDDD0CFECB8ADB9C5703D6EFC37BA30 /* NSString+ZXLExtension.m in Sources */,
-				D7579938269A375E9927BEE4F999A3DB /* UIButton+ZXLExtension.m in Sources */,
-				195FA3471EE532DC3E99FD10CE9215FC /* UIColor+ZXLExtension.m in Sources */,
-				6C3E6524A2E2DA37732664D3C9AA9D99 /* UIImage+ZXLExtension.m in Sources */,
-				3754DB61F5E69FD3B9AB338DD2EAE7A6 /* UIImageView+ZXLExtension.m in Sources */,
-				E0D0B78524306F6699AF580BA24B67B5 /* UIView+ZXLExtension.m in Sources */,
-				F718CF9D77BB73DF7635FBDDB080D1BA /* UIViewController+ZXLExtension.m in Sources */,
-				A4876BFBF6269A1345AD1D0517991E32 /* ZXLBaseLibrary-dummy.m in Sources */,
-				BB6C3439D049AF36BBE55C347C81A412 /* ZXLExtensionResource.m in Sources */,
-				280F8E5CFD75EDD8292E41408F5E13B7 /* ZXLPhoneInfo.m in Sources */,
-				9F7006B3951C229696F9A2ED0C55FD98 /* ZXLResourceAddress.m in Sources */,
-				2EF079030E089AEFF27C8D0909F4EC51 /* ZXLRouter.m in Sources */,
-				328601D6230A521147BCA9FAE25E5C5C /* ZXLServerAddress.m in Sources */,
-				9D7E8332D862A4B43D28FCAF55278C43 /* ZXLUtilsFunction.m in Sources */,
+				03FAD6D68BBA36C0F0CB7E4C399C426B /* NSArray+ZXLExtension.m in Sources */,
+				3500DCAA7F2AC86DA9F1BDD13A19FC0C /* NSDate+ZXLExtension.m in Sources */,
+				5C0AE957B491A3CD513829526C6307D5 /* NSDictionary+ZXLExtension.m in Sources */,
+				7090DC14A7DA74FC8F97FA6E88DEC6A4 /* NSObject+ZXLExtension.m in Sources */,
+				09E9D8B878E6A6DE639805135EF94CD7 /* NSString+Route.m in Sources */,
+				083F384009CF5F19FB7568CAAA73074C /* NSString+ZXLExtension.m in Sources */,
+				0F4CDCAF5D2A8AB742B77CECECF2CFB5 /* UIButton+ZXLExtension.m in Sources */,
+				348C5FF07448990F90A89E96AEB45BAC /* UIColor+ZXLExtension.m in Sources */,
+				52DAAA856B07AB5D2E950F5AC5039769 /* UIImage+ZXLExtension.m in Sources */,
+				5B74B7D485205E20C3D3BF198262808E /* UIImageView+ZXLExtension.m in Sources */,
+				0E631F8EC6602EE7C8FED66EB9D0347B /* UIView+ZXLExtension.m in Sources */,
+				FBD2BA97FF2D7016220C22E96A25E7C0 /* UIViewController+ZXLExtension.m in Sources */,
+				4850A0FF0A40C938974BB4374C60A1C4 /* ZXLBaseLibrary-dummy.m in Sources */,
+				B35D44D9C6219730D354BAE7DF05C9A9 /* ZXLExtensionResource.m in Sources */,
+				9B8E2629DB27C5CC4A4D23AF9403C978 /* ZXLGlobalVariables.m in Sources */,
+				B54E8C36C70234D2A299E85189E7465E /* ZXLPhoneInfo.m in Sources */,
+				EDD6F57BA326B6951C9D6DCEA746276F /* ZXLProgramSetting.m in Sources */,
+				90F755CDC7B4285EF6D2A4C753A2D81D /* ZXLResourceAddress.m in Sources */,
+				587501CD7CA9925D2F32F601D4BB5C3D /* ZXLRouter.m in Sources */,
+				932AF62836B622BE7F3660BEDF9B58AC /* ZXLServerAddress.m in Sources */,
+				C965BB9EC6980BFFE9824BCB796F3DB6 /* ZXLSettingFunction.m in Sources */,
+				01C6A17D33C8D725BE90C13F78922C0D /* ZXLUtilsFunction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +496,7 @@
 /* Begin XCBuildConfiguration section */
 		30F7830C5B49B422E303B21D315B65A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE479D6AFE3F6C3BCBD92BF79A6C12C3 /* ZXLBaseLibrary.xcconfig */;
+			baseConfigurationReference = 74E933694B9C411064A3F36B9784057B /* ZXLBaseLibrary.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -646,7 +686,7 @@
 		};
 		C8089B80115006A763746138D0D2170C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE479D6AFE3F6C3BCBD92BF79A6C12C3 /* ZXLBaseLibrary.xcconfig */;
+			baseConfigurationReference = 74E933694B9C411064A3F36B9784057B /* ZXLBaseLibrary.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
