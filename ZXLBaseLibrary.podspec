@@ -44,6 +44,9 @@ Pod::Spec.new do |s|
   #语音处理中心
   s.subspec 'ZXLVoice' do |ss|
       ss.source_files = 'ZXLBaseLibrary/Classes/Voice/*.{h,m}'
+      ss.vendored_frameworks =  ['ZXLBaseLibrary/Classes/Voice/Framework/lame.framework']
+      ss.dependency 'ZXLBaseLibrary/ZXLExtension'
+      ss.frameworks = 'AVFoundation'
   end
   #网页处理中心（jsbridge 和网页请求拦截处理）
   s.subspec 'ZXLWeb' do |ss|
@@ -82,7 +85,7 @@ Pod::Spec.new do |s|
       ss.vendored_frameworks =  ['ZXLBaseLibrary/Classes/PushMessage/Framework/GTSDK.framework']
       ss.dependency 'ZXLBaseLibrary/ZXLUtils'
       ss.dependency 'ZXLBaseLibrary/ZXLRouter'
-      s.frameworks = 'UserNotifications'
+      ss.frameworks = 'UserNotifications'
   end
   #第三方（微信、微博、QQ等）
   s.subspec 'ZXLThirdParty' do |ss|

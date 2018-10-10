@@ -68,7 +68,11 @@
     },
     {
       "name": "ZXLVoice",
-      "source_files": "ZXLBaseLibrary/Classes/Voice/*.{h,m}"
+      "source_files": "ZXLBaseLibrary/Classes/Voice/*.{h,m}",
+      "vendored_frameworks": [
+        "ZXLBaseLibrary/Classes/Voice/Framework/lame.framework"
+      ],
+      "frameworks": "AVFoundation"
     },
     {
       "name": "ZXLWeb",
@@ -136,7 +140,8 @@
         "ZXLBaseLibrary/ZXLRouter": [
 
         ]
-      }
+      },
+      "frameworks": "UserNotifications"
     },
     {
       "name": "ZXLThirdParty",
