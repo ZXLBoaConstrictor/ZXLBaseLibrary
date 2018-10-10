@@ -41,7 +41,95 @@
     },
     {
       "name": "ZXLSetting",
-      "source_files": "ZXLBaseLibrary/Classes/Setting/*.{h,m}"
+      "source_files": "ZXLBaseLibrary/Classes/Setting/*.{h,m}",
+      "dependencies": {
+        "ZXLBaseLibrary/ZXLExtension": [
+
+        ]
+      }
+    },
+    {
+      "name": "ZXLNetWork",
+      "source_files": "ZXLBaseLibrary/Classes/NetWork/*.{h,m}",
+      "dependencies": {
+        "ZXLBaseLibrary/ZXLUtils": [
+
+        ],
+        "AFNetworking": [
+
+        ],
+        "CocoaAsyncSocket": [
+
+        ],
+        "SVProgressHUD": [
+
+        ]
+      }
+    },
+    {
+      "name": "ZXLVoice",
+      "source_files": "ZXLBaseLibrary/Classes/Voice/*.{h,m}"
+    },
+    {
+      "name": "ZXLWeb",
+      "source_files": "ZXLBaseLibrary/Classes/Web/*.{h,m}"
+    },
+    {
+      "name": "ZXLPlayer",
+      "source_files": "ZXLBaseLibrary/Classes/Player/*.{h,m}",
+      "resources": [
+        "ZXLBaseLibrary/Classes/Player/Resource/ZFPlayer.bundle"
+      ],
+      "dependencies": {
+        "Masonry": [
+
+        ]
+      }
+    },
+    {
+      "name": "ZXLUploadDownload",
+      "source_files": "ZXLBaseLibrary/Classes/UploadDownload/*.{h,m}"
+    },
+    {
+      "name": "ZXLCrashUtils",
+      "source_files": "ZXLBaseLibrary/Classes/CrashUtils/*.{h,m}",
+      "dependencies": {
+        "Bugly": [
+
+        ],
+        "ZXLBaseLibrary/ZXLUtils": [
+
+        ]
+      }
+    },
+    {
+      "name": "ZXLImagePicker",
+      "source_files": "ZXLBaseLibrary/Classes/ImagePicker/*.{h,m}",
+      "resources": [
+        "ZXLBaseLibrary/Classes/ImagePicker/Resource/TZImagePickerController.bundle"
+      ],
+      "dependencies": {
+        "SVProgressHUD": [
+
+        ]
+      },
+      "frameworks": [
+        "ImageIO",
+        "AssetsLibrary",
+        "MediaPlayer"
+      ]
+    },
+    {
+      "name": "ZXLPayUtils",
+      "source_files": "ZXLBaseLibrary/Classes/PayUtils/*.{h,m}"
+    },
+    {
+      "name": "ZXLPushMessage",
+      "source_files": "ZXLBaseLibrary/Classes/PushMessage/*.{h,m}"
+    },
+    {
+      "name": "ZXLThirdParty",
+      "source_files": "ZXLBaseLibrary/Classes/ThirdParty/*.{h,m}"
     }
   ]
 }

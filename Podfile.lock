@@ -1,25 +1,86 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Bugly (2.5.0)
+  - CocoaAsyncSocket (7.6.3)
+  - Masonry (1.1.0)
+  - SVProgressHUD (2.2.5)
   - ZXLBaseLibrary (1.0.1):
+    - ZXLBaseLibrary/ZXLCrashUtils (= 1.0.1)
     - ZXLBaseLibrary/ZXLCustom (= 1.0.1)
     - ZXLBaseLibrary/ZXLExtension (= 1.0.1)
+    - ZXLBaseLibrary/ZXLImagePicker (= 1.0.1)
+    - ZXLBaseLibrary/ZXLNetWork (= 1.0.1)
+    - ZXLBaseLibrary/ZXLPayUtils (= 1.0.1)
+    - ZXLBaseLibrary/ZXLPlayer (= 1.0.1)
+    - ZXLBaseLibrary/ZXLPushMessage (= 1.0.1)
     - ZXLBaseLibrary/ZXLRouter (= 1.0.1)
     - ZXLBaseLibrary/ZXLSetting (= 1.0.1)
+    - ZXLBaseLibrary/ZXLThirdParty (= 1.0.1)
+    - ZXLBaseLibrary/ZXLUploadDownload (= 1.0.1)
     - ZXLBaseLibrary/ZXLUtils (= 1.0.1)
+    - ZXLBaseLibrary/ZXLVoice (= 1.0.1)
+    - ZXLBaseLibrary/ZXLWeb (= 1.0.1)
+  - ZXLBaseLibrary/ZXLCrashUtils (1.0.1):
+    - Bugly
+    - ZXLBaseLibrary/ZXLUtils
   - ZXLBaseLibrary/ZXLCustom (1.0.1)
   - ZXLBaseLibrary/ZXLExtension (1.0.1)
+  - ZXLBaseLibrary/ZXLImagePicker (1.0.1):
+    - SVProgressHUD
+  - ZXLBaseLibrary/ZXLNetWork (1.0.1):
+    - AFNetworking
+    - CocoaAsyncSocket
+    - SVProgressHUD
+    - ZXLBaseLibrary/ZXLUtils
+  - ZXLBaseLibrary/ZXLPayUtils (1.0.1)
+  - ZXLBaseLibrary/ZXLPlayer (1.0.1):
+    - Masonry
+  - ZXLBaseLibrary/ZXLPushMessage (1.0.1)
   - ZXLBaseLibrary/ZXLRouter (1.0.1)
-  - ZXLBaseLibrary/ZXLSetting (1.0.1)
+  - ZXLBaseLibrary/ZXLSetting (1.0.1):
+    - ZXLBaseLibrary/ZXLExtension
+  - ZXLBaseLibrary/ZXLThirdParty (1.0.1)
+  - ZXLBaseLibrary/ZXLUploadDownload (1.0.1)
   - ZXLBaseLibrary/ZXLUtils (1.0.1)
+  - ZXLBaseLibrary/ZXLVoice (1.0.1)
+  - ZXLBaseLibrary/ZXLWeb (1.0.1)
 
 DEPENDENCIES:
   - ZXLBaseLibrary (from `./ZXLBaseLibrary.podspec`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Bugly
+    - CocoaAsyncSocket
+    - Masonry
+    - SVProgressHUD
 
 EXTERNAL SOURCES:
   ZXLBaseLibrary:
     :path: "./ZXLBaseLibrary.podspec"
 
 SPEC CHECKSUMS:
-  ZXLBaseLibrary: dc2534baada5105fdcf65e9ed9b69edee5a57311
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  ZXLBaseLibrary: 19538626e1683c84986a637ed17b1bc015fc1d4e
 
 PODFILE CHECKSUM: c32e4913cb859b3684dea04935f731ec998477f3
 

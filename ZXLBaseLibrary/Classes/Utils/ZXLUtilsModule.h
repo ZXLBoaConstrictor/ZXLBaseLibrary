@@ -14,5 +14,6 @@
 #import "ZXLResourceAddress.h"
 #import "ZXLServerAddress.h"
 #import "ZXLUtilsFunction.h"
+#import "ZXLCGDTimer.h"
 
 #endif /* ZXLUtilsModule_h */
