@@ -125,7 +125,18 @@
     },
     {
       "name": "ZXLPushMessage",
-      "source_files": "ZXLBaseLibrary/Classes/PushMessage/*.{h,m}"
+      "source_files": "ZXLBaseLibrary/Classes/PushMessage/*.{h,m}",
+      "vendored_frameworks": [
+        "ZXLBaseLibrary/Classes/PushMessage/Framework/GTSDK.framework"
+      ],
+      "dependencies": {
+        "ZXLBaseLibrary/ZXLUtils": [
+
+        ],
+        "ZXLBaseLibrary/ZXLRouter": [
+
+        ]
+      }
     },
     {
       "name": "ZXLThirdParty",

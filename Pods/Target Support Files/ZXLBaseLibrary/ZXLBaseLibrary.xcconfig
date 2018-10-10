@@ -1,9 +1,9 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ZXLBaseLibrary
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Bugly"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../ZXLBaseLibrary/Classes/PushMessage/Framework" "${PODS_ROOT}/Bugly"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/ZXLBaseLibrary" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Bugly" "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" "${PODS_ROOT}/Headers/Public/Masonry" "${PODS_ROOT}/Headers/Public/SVProgressHUD" "${PODS_ROOT}/Headers/Public/ZXLBaseLibrary"
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_CONFIGURATION_BUILD_DIR}/SVProgressHUD"
-OTHER_LDFLAGS = -w -framework "AssetsLibrary" -framework "Foundation" -framework "ImageIO" -framework "MediaPlayer" -framework "UIKit"
+OTHER_LDFLAGS = -w -framework "AssetsLibrary" -framework "Foundation" -framework "GTSDK" -framework "ImageIO" -framework "MediaPlayer" -framework "UIKit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}

@@ -79,6 +79,10 @@ Pod::Spec.new do |s|
   #推送
   s.subspec 'ZXLPushMessage' do |ss|
       ss.source_files = 'ZXLBaseLibrary/Classes/PushMessage/*.{h,m}'
+      ss.vendored_frameworks =  ['ZXLBaseLibrary/Classes/PushMessage/Framework/GTSDK.framework']
+      ss.dependency 'ZXLBaseLibrary/ZXLUtils'
+      ss.dependency 'ZXLBaseLibrary/ZXLRouter'
+      s.frameworks = 'UserNotifications'
   end
   #第三方（微信、微博、QQ等）
   s.subspec 'ZXLThirdParty' do |ss|

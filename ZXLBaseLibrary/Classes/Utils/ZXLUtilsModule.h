@@ -9,7 +9,6 @@
 #define ZXLUtilsModule_h
 
 #import "ZXLUtilsDefined.h"
-#import "ZXLNSURLProtocol.h"
 #import "ZXLPhoneInfo.h"
 #import "ZXLResourceAddress.h"
 #import "ZXLServerAddress.h"

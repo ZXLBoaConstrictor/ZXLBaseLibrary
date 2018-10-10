@@ -49,7 +49,9 @@ PODS:
   - ZXLBaseLibrary/ZXLPayUtils (1.0.1)
   - ZXLBaseLibrary/ZXLPlayer (1.0.1):
     - Masonry
-  - ZXLBaseLibrary/ZXLPushMessage (1.0.1)
+  - ZXLBaseLibrary/ZXLPushMessage (1.0.1):
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
   - ZXLBaseLibrary/ZXLRouter (1.0.1)
   - ZXLBaseLibrary/ZXLSetting (1.0.1):
     - ZXLBaseLibrary/ZXLExtension
@@ -80,7 +82,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  ZXLBaseLibrary: 19538626e1683c84986a637ed17b1bc015fc1d4e
+  ZXLBaseLibrary: c05d2d2bb05e322a1c0d02a3d8c45bb2e0a3bf5e
 
 PODFILE CHECKSUM: c32e4913cb859b3684dea04935f731ec998477f3
 
