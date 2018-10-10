@@ -8,11 +8,10 @@
     "zhangxiaolong": "244061043@qq.com"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source": {
-    "git": "https://github.com/ZXLBoaConstrictor/ZXLBaseLibrary.git",
-    "tag": "1.0.1"
+    "git": "https://github.com/ZXLBoaConstrictor/ZXLBaseLibrary.git\", :tag => \"#{s.version}"
   },
   "source_files": "ZXLBaseLibrary/Classes/*.{h,m}",
   "frameworks": [
@@ -22,5 +21,27 @@
   "requires_arc": true,
   "xcconfig": {
     "OTHER_LDFLAGS": "-w"
-  }
+  },
+  "subspecs": [
+    {
+      "name": "ZXLUtils",
+      "source_files": "ZXLBaseLibrary/Classes/Utils/*.{h,m}"
+    },
+    {
+      "name": "ZXLExtension",
+      "source_files": "ZXLBaseLibrary/Classes/Extension/*.{h,m}"
+    },
+    {
+      "name": "ZXLRouter",
+      "source_files": "ZXLBaseLibrary/Classes/Router/*.{h,m}"
+    },
+    {
+      "name": "ZXLCustom",
+      "source_files": "ZXLBaseLibrary/Classes/Custom/*.{h,m}"
+    },
+    {
+      "name": "ZXLSetting",
+      "source_files": "ZXLBaseLibrary/Classes/Setting/*.{h,m}"
+    }
+  ]
 }

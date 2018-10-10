@@ -1,5 +1,15 @@
 PODS:
-  - ZXLBaseLibrary (1.0.1)
+  - ZXLBaseLibrary (1.0.1):
+    - ZXLBaseLibrary/ZXLCustom (= 1.0.1)
+    - ZXLBaseLibrary/ZXLExtension (= 1.0.1)
+    - ZXLBaseLibrary/ZXLRouter (= 1.0.1)
+    - ZXLBaseLibrary/ZXLSetting (= 1.0.1)
+    - ZXLBaseLibrary/ZXLUtils (= 1.0.1)
+  - ZXLBaseLibrary/ZXLCustom (1.0.1)
+  - ZXLBaseLibrary/ZXLExtension (1.0.1)
+  - ZXLBaseLibrary/ZXLRouter (1.0.1)
+  - ZXLBaseLibrary/ZXLSetting (1.0.1)
+  - ZXLBaseLibrary/ZXLUtils (1.0.1)
 
 DEPENDENCIES:
   - ZXLBaseLibrary (from `./ZXLBaseLibrary.podspec`)
@@ -9,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "./ZXLBaseLibrary.podspec"
 
 SPEC CHECKSUMS:
-  ZXLBaseLibrary: a5eb730e4a5b3201d9316a82aa3b36b941df7de5
+  ZXLBaseLibrary: dc2534baada5105fdcf65e9ed9b69edee5a57311
 
 PODFILE CHECKSUM: c32e4913cb859b3684dea04935f731ec998477f3
 
