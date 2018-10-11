@@ -16,12 +16,20 @@ PODS:
     - AFNetworking/NSURLSession
   - Bugly (2.5.0)
   - CocoaAsyncSocket (7.6.3)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - KTVCocoaHTTPServer (1.0.0):
+    - CocoaAsyncSocket
+  - KTVHTTPCache (1.1.5):
+    - KTVCocoaHTTPServer
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.7)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
   - SVProgressHUD (2.2.5)
+  - WechatOpenSDK (1.8.2)
   - ZXLBaseLibrary (1.0.1):
     - ZXLBaseLibrary/ZXLCrashUtils (= 1.0.1)
     - ZXLBaseLibrary/ZXLCustom (= 1.0.1)
@@ -114,7 +122,10 @@ PODS:
     - CocoaAsyncSocket
     - SVProgressHUD
     - ZXLBaseLibrary/ZXLUtils
-  - ZXLBaseLibrary/ZXLPayUtils (1.0.1)
+  - ZXLBaseLibrary/ZXLPayUtils (1.0.1):
+    - SVProgressHUD
+    - WechatOpenSDK
+    - ZXLBaseLibrary/ZXLUtils
   - ZXLBaseLibrary/ZXLPlayer (1.0.1):
     - Masonry
   - ZXLBaseLibrary/ZXLPushMessage (1.0.1):
@@ -123,14 +134,35 @@ PODS:
   - ZXLBaseLibrary/ZXLRouter (1.0.1)
   - ZXLBaseLibrary/ZXLSetting (1.0.1):
     - ZXLBaseLibrary/ZXLExtension
-  - ZXLBaseLibrary/ZXLThirdParty (1.0.1)
-  - ZXLBaseLibrary/ZXLUploadDownload (1.0.1)
+  - ZXLBaseLibrary/ZXLThirdParty (1.0.1):
+    - SVProgressHUD
+    - WechatOpenSDK
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
+  - ZXLBaseLibrary/ZXLUploadDownload (1.0.1):
+    - FMDB
+    - KTVHTTPCache
+    - ZXLBaseLibrary/ZXLNetWork
+    - ZXLBaseLibrary/ZXLSetting
+    - ZXLBaseLibrary/ZXLUploadDownload/ZXLDownload (= 1.0.1)
+    - ZXLBaseLibrary/ZXLUtils
+    - ZXLUpload
+  - ZXLBaseLibrary/ZXLUploadDownload/ZXLDownload (1.0.1):
+    - AFNetworking
+    - FMDB
+    - KTVHTTPCache
+    - ZXLBaseLibrary/ZXLNetWork
+    - ZXLBaseLibrary/ZXLSetting
+    - ZXLBaseLibrary/ZXLUtils
+    - ZXLUpload
   - ZXLBaseLibrary/ZXLUtils (1.0.1)
   - ZXLBaseLibrary/ZXLVoice (1.0.1):
     - ZXLBaseLibrary/ZXLExtension
   - ZXLBaseLibrary/ZXLWeb (1.0.1):
     - SDWebImage
     - ZXLBaseLibrary/ZXLCustom/ZXLCustomVC
+  - ZXLUpload (1.0.5):
+    - FMDB
 
 DEPENDENCIES:
   - ZXLBaseLibrary (from `./ZXLBaseLibrary.podspec`)
@@ -140,10 +172,15 @@ SPEC REPOS:
     - AFNetworking
     - Bugly
     - CocoaAsyncSocket
+    - FMDB
+    - KTVCocoaHTTPServer
+    - KTVHTTPCache
     - Masonry
     - MJRefresh
     - SDWebImage
     - SVProgressHUD
+    - WechatOpenSDK
+    - ZXLUpload
 
 EXTERNAL SOURCES:
   ZXLBaseLibrary:
@@ -153,11 +190,16 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  KTVCocoaHTTPServer: df8d7b861e603ff8037e9b2138aca2563a6b768d
+  KTVHTTPCache: 8f4b21cd81122f7211dc01f02ec728794ebdc9e1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  ZXLBaseLibrary: 928d177b32271c7c04e64185917e2038ab8db13e
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
+  ZXLBaseLibrary: 3e42831c578f8c83dc17da19a4a968b66e382ce1
+  ZXLUpload: 056d3d265225e7476f7c29bd1952686af83dacc6
 
 PODFILE CHECKSUM: c32e4913cb859b3684dea04935f731ec998477f3
 

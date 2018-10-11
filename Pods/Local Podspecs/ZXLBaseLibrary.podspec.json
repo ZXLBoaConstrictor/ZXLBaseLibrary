@@ -174,7 +174,47 @@
     },
     {
       "name": "ZXLUploadDownload",
-      "source_files": "ZXLBaseLibrary/Classes/UploadDownload/*.{h,m}"
+      "source_files": "ZXLBaseLibrary/Classes/UploadDownload/*.{h,m}",
+      "vendored_frameworks": [
+        "ZXLBaseLibrary/Classes/UploadDownload/Framework/AliyunOSSiOS.framework"
+      ],
+      "dependencies": {
+        "ZXLBaseLibrary/ZXLUtils": [
+
+        ],
+        "ZXLBaseLibrary/ZXLNetWork": [
+
+        ],
+        "ZXLBaseLibrary/ZXLSetting": [
+
+        ],
+        "FMDB": [
+
+        ],
+        "ZXLUpload": [
+
+        ],
+        "KTVHTTPCache": [
+
+        ]
+      },
+      "frameworks": [
+        "SystemConfiguration",
+        "CoreTelephony"
+      ],
+      "libraries": "resolv",
+      "compiler_flags": "-Wno-format",
+      "subspecs": [
+        {
+          "name": "ZXLDownload",
+          "source_files": "ZXLBaseLibrary/Classes/UploadDownload/ZFDownload/*.{h,m}",
+          "dependencies": {
+            "AFNetworking": [
+
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "ZXLCrashUtils",
@@ -207,7 +247,25 @@
     },
     {
       "name": "ZXLPayUtils",
-      "source_files": "ZXLBaseLibrary/Classes/PayUtils/*.{h,m}"
+      "source_files": "ZXLBaseLibrary/Classes/PayUtils/*.{h,m}",
+      "vendored_frameworks": [
+        "ZXLBaseLibrary/Classes/PayUtils/Framework/AlipaySDK.framework"
+      ],
+      "resources": [
+        "ZXLBaseLibrary/Classes/PayUtils/Resource/AlipaySDK.bundle"
+      ],
+      "dependencies": {
+        "ZXLBaseLibrary/ZXLUtils": [
+
+        ],
+        "SVProgressHUD": [
+
+        ],
+        "WechatOpenSDK": [
+
+        ]
+      },
+      "frameworks": "CoreMotion"
     },
     {
       "name": "ZXLPushMessage",
@@ -227,7 +285,27 @@
     },
     {
       "name": "ZXLThirdParty",
-      "source_files": "ZXLBaseLibrary/Classes/ThirdParty/*.{h,m}"
+      "source_files": "ZXLBaseLibrary/Classes/ThirdParty/*.{h,m}",
+      "vendored_frameworks": [
+        "ZXLBaseLibrary/Classes/ThirdParty/Framework/TencentOpenAPI.framework"
+      ],
+      "resources": [
+        "ZXLBaseLibrary/Classes/ThirdParty/Resource/TencentOpenApi_IOS_Bundle.bundle"
+      ],
+      "dependencies": {
+        "ZXLBaseLibrary/ZXLUtils": [
+
+        ],
+        "ZXLBaseLibrary/ZXLRouter": [
+
+        ],
+        "SVProgressHUD": [
+
+        ],
+        "WechatOpenSDK": [
+
+        ]
+      }
     }
   ]
 }

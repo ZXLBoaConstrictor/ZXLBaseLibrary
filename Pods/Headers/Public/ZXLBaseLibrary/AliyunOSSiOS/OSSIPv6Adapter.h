@@ -1,0 +1,1 @@
+../../../../../ZXLBaseLibrary/Classes/UploadDownload/Framework/AliyunOSSiOS.framework/Headers/OSSIPv6Adapter.h

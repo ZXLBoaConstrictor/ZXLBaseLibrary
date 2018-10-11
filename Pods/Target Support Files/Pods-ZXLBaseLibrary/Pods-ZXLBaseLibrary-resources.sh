@@ -95,13 +95,19 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${PODS_ROOT}/../ZXLBaseLibrary/Classes/ImagePicker/Resource/TZImagePickerController.bundle"
+  install_resource "${PODS_ROOT}/../ZXLBaseLibrary/Classes/PayUtils/Resource/AlipaySDK.bundle"
   install_resource "${PODS_ROOT}/../ZXLBaseLibrary/Classes/Player/Resource/ZFPlayer.bundle"
+  install_resource "${PODS_ROOT}/../ZXLBaseLibrary/Classes/ThirdParty/Resource/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "${PODS_ROOT}/ZXLUpload/Framework/ZXLUpload.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${PODS_ROOT}/../ZXLBaseLibrary/Classes/ImagePicker/Resource/TZImagePickerController.bundle"
+  install_resource "${PODS_ROOT}/../ZXLBaseLibrary/Classes/PayUtils/Resource/AlipaySDK.bundle"
   install_resource "${PODS_ROOT}/../ZXLBaseLibrary/Classes/Player/Resource/ZFPlayer.bundle"
+  install_resource "${PODS_ROOT}/../ZXLBaseLibrary/Classes/ThirdParty/Resource/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "${PODS_ROOT}/ZXLUpload/Framework/ZXLUpload.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

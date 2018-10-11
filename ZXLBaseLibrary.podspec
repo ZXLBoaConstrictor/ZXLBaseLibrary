@@ -98,6 +98,21 @@ Pod::Spec.new do |s|
   #上传下载
   s.subspec 'ZXLUploadDownload' do |ss|
       ss.source_files = 'ZXLBaseLibrary/Classes/UploadDownload/*.{h,m}'
+      ss.vendored_frameworks =  ['ZXLBaseLibrary/Classes/UploadDownload/Framework/AliyunOSSiOS.framework']
+      ss.subspec 'ZXLDownload' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/UploadDownload/ZFDownload/*.{h,m}'
+          sss.dependency 'AFNetworking'
+      end
+      ss.dependency 'ZXLBaseLibrary/ZXLUtils'
+      ss.dependency 'ZXLBaseLibrary/ZXLNetWork'
+      ss.dependency 'ZXLBaseLibrary/ZXLSetting'
+      ss.dependency 'FMDB'
+      ss.dependency 'ZXLUpload'
+      ss.dependency 'KTVHTTPCache'
+      
+      ss.frameworks = 'SystemConfiguration','CoreTelephony'
+      ss.libraries = 'resolv'
+      ss.compiler_flags = '-Wno-format'
   end
   #崩溃记录
   s.subspec 'ZXLCrashUtils' do |ss|
@@ -115,6 +130,12 @@ Pod::Spec.new do |s|
   #支付
   s.subspec 'ZXLPayUtils' do |ss|
       ss.source_files = 'ZXLBaseLibrary/Classes/PayUtils/*.{h,m}'
+      ss.vendored_frameworks =  ['ZXLBaseLibrary/Classes/PayUtils/Framework/AlipaySDK.framework']
+      ss.resources = ['ZXLBaseLibrary/Classes/PayUtils/Resource/AlipaySDK.bundle']
+      ss.dependency 'ZXLBaseLibrary/ZXLUtils'
+      ss.dependency 'SVProgressHUD'
+      ss.dependency 'WechatOpenSDK'
+      ss.frameworks = 'CoreMotion'
   end
   #推送
   s.subspec 'ZXLPushMessage' do |ss|
@@ -124,9 +145,15 @@ Pod::Spec.new do |s|
       ss.dependency 'ZXLBaseLibrary/ZXLRouter'
       ss.frameworks = 'UserNotifications'
   end
-  #第三方（微信、微博、QQ等）
+  #第三方（微信、QQ等）
   s.subspec 'ZXLThirdParty' do |ss|
       ss.source_files = 'ZXLBaseLibrary/Classes/ThirdParty/*.{h,m}'
+      ss.vendored_frameworks =  ['ZXLBaseLibrary/Classes/ThirdParty/Framework/TencentOpenAPI.framework']
+      ss.resources = ['ZXLBaseLibrary/Classes/ThirdParty/Resource/TencentOpenApi_IOS_Bundle.bundle']
+      ss.dependency 'ZXLBaseLibrary/ZXLUtils'
+      ss.dependency 'ZXLBaseLibrary/ZXLRouter'
+      ss.dependency 'SVProgressHUD'
+      ss.dependency 'WechatOpenSDK'
   end
   
 
