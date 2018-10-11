@@ -270,7 +270,7 @@ NSString *const kLCCKAudioDataKey;
 
 - (NSString *)cachePath {
     if (!_cachePath) {
-        _cachePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"com.jlb.chat.audioCache"];
+        _cachePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"com.ZXL.chat.audioCache"];
         if (![[NSFileManager defaultManager] fileExistsAtPath:_cachePath]) {
             [[NSFileManager defaultManager] createDirectoryAtPath:_cachePath withIntermediateDirectories:YES attributes:nil error:nil];
         }

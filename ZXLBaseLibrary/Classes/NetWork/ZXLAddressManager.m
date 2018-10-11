@@ -44,7 +44,7 @@ __strong static ZXLAddressManager * addressManager = nil;
         {
             _socketHost         = @"test-link.bestZXL.com";
             _socketPort         = @"5150";
-            _address            = @"https://test-web-api.bestjlb.com/";
+            _address            = @"https://test-web-api.bestZXL.com/";
             
             _bucketName         = @"ZXLapp";
             _endPoint           = @"https://oss-cn-hangzhou.aliyuncs.com";
@@ -57,7 +57,7 @@ __strong static ZXLAddressManager * addressManager = nil;
             _socketPort         = @"5150";
             _address            = @"http://10.10.10.23:8101/";
             
-            _bucketName         = @"jlbapp";
+            _bucketName         = @"ZXLapp";
             _endPoint           = @"https://oss-cn-hangzhou.aliyuncs.com";
             _downloadfileURL    = @"https://images2.bestZXL.com/";
         }
@@ -66,16 +66,16 @@ __strong static ZXLAddressManager * addressManager = nil;
         {
             _socketHost         = @"link.bestZXL.com";
             _socketPort         = @"5150";
-            _address            = @"https://web-api.bestjlb.com/";
+            _address            = @"https://web-api.bestZXL.com/";
             
             _bucketName         = @"ZXL-oss";
             _endPoint           = @"https://oss-cn-hangzhou.aliyuncs.com";
-            _downloadfileURL    = @"https://media.bestjlb.com/";
+            _downloadfileURL    = @"https://media.bestZXL.com/";
         }
             break;
     }
     
-    [[ZXLServerAddress manager] setCompanyHost:@[@"bestjlb.com",@"zhixuezhen.com",@"10.10.10.22",@"101.69.254.162"]];
+    [[ZXLServerAddress manager] setCompanyHost:@[@"bestZXL.com",@"zhixuezhen.com",@"10.10.10.22",@"101.69.254.162"]];
 }
 
 +(NSString *)systemAddress:(ZXLAddressType)addressType{

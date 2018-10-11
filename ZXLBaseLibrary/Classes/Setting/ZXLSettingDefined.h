@@ -30,3 +30,5 @@
 界面标准
  */
 #define EtalonSpacing (12*ViewScaleValue)
+
+#endif

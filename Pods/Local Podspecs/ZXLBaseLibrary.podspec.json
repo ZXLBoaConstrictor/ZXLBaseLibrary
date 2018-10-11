@@ -37,7 +37,76 @@
     },
     {
       "name": "ZXLCustom",
-      "source_files": "ZXLBaseLibrary/Classes/Custom/*.{h,m}"
+      "source_files": "ZXLBaseLibrary/Classes/Custom/*.{h,m}",
+      "dependencies": {
+        "ZXLBaseLibrary/ZXLExtension": [
+
+        ],
+        "ZXLBaseLibrary/ZXLRouter": [
+
+        ],
+        "ZXLBaseLibrary/ZXLUtils": [
+
+        ],
+        "MJRefresh": [
+
+        ],
+        "Masonry": [
+
+        ],
+        "SDWebImage": [
+
+        ],
+        "SVProgressHUD": [
+
+        ]
+      },
+      "frameworks": [
+        "UIKit",
+        "Foundation",
+        "MessageUI"
+      ],
+      "subspecs": [
+        {
+          "name": "ZXLCustomView",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/CustomView/*.{h,m}"
+        },
+        {
+          "name": "ZXLCustomVC",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/CustomVC/*.{h,m}"
+        },
+        {
+          "name": "ZXLPopTips",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/PopTips/*.{h,m}"
+        },
+        {
+          "name": "ZXLTableView",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/TableView/*.{h,m}",
+          "dependencies": {
+            "ZXLBaseLibrary/ZXLCustom/ZXLCustomVC": [
+
+            ]
+          }
+        },
+        {
+          "name": "ZXLPopMenu",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/PopMenu/*.{h,m}",
+          "dependencies": {
+            "ZXLBaseLibrary/ZXLCustom/ZXLTableView": [
+
+            ]
+          }
+        },
+        {
+          "name": "ZXLActionSheet",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/ActionSheet/*.{h,m}",
+          "dependencies": {
+            "ZXLBaseLibrary/ZXLCustom/ZXLTableView": [
+
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "ZXLSetting",
@@ -72,11 +141,24 @@
       "vendored_frameworks": [
         "ZXLBaseLibrary/Classes/Voice/Framework/lame.framework"
       ],
+      "dependencies": {
+        "ZXLBaseLibrary/ZXLExtension": [
+
+        ]
+      },
       "frameworks": "AVFoundation"
     },
     {
       "name": "ZXLWeb",
-      "source_files": "ZXLBaseLibrary/Classes/Web/*.{h,m}"
+      "source_files": "ZXLBaseLibrary/Classes/Web/*.{h,m}",
+      "dependencies": {
+        "ZXLBaseLibrary/ZXLCustom/ZXLCustomVC": [
+
+        ],
+        "SDWebImage": [
+
+        ]
+      }
     },
     {
       "name": "ZXLPlayer",

@@ -17,6 +17,10 @@ PODS:
   - Bugly (2.5.0)
   - CocoaAsyncSocket (7.6.3)
   - Masonry (1.1.0)
+  - MJRefresh (3.1.15.7)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
   - SVProgressHUD (2.2.5)
   - ZXLBaseLibrary (1.0.1):
     - ZXLBaseLibrary/ZXLCrashUtils (= 1.0.1)
@@ -37,7 +41,71 @@ PODS:
   - ZXLBaseLibrary/ZXLCrashUtils (1.0.1):
     - Bugly
     - ZXLBaseLibrary/ZXLUtils
-  - ZXLBaseLibrary/ZXLCustom (1.0.1)
+  - ZXLBaseLibrary/ZXLCustom (1.0.1):
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - ZXLBaseLibrary/ZXLCustom/ZXLActionSheet (= 1.0.1)
+    - ZXLBaseLibrary/ZXLCustom/ZXLCustomVC (= 1.0.1)
+    - ZXLBaseLibrary/ZXLCustom/ZXLCustomView (= 1.0.1)
+    - ZXLBaseLibrary/ZXLCustom/ZXLPopMenu (= 1.0.1)
+    - ZXLBaseLibrary/ZXLCustom/ZXLPopTips (= 1.0.1)
+    - ZXLBaseLibrary/ZXLCustom/ZXLTableView (= 1.0.1)
+    - ZXLBaseLibrary/ZXLExtension
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
+  - ZXLBaseLibrary/ZXLCustom/ZXLActionSheet (1.0.1):
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - ZXLBaseLibrary/ZXLCustom/ZXLTableView
+    - ZXLBaseLibrary/ZXLExtension
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
+  - ZXLBaseLibrary/ZXLCustom/ZXLCustomVC (1.0.1):
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - ZXLBaseLibrary/ZXLExtension
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
+  - ZXLBaseLibrary/ZXLCustom/ZXLCustomView (1.0.1):
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - ZXLBaseLibrary/ZXLExtension
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
+  - ZXLBaseLibrary/ZXLCustom/ZXLPopMenu (1.0.1):
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - ZXLBaseLibrary/ZXLCustom/ZXLTableView
+    - ZXLBaseLibrary/ZXLExtension
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
+  - ZXLBaseLibrary/ZXLCustom/ZXLPopTips (1.0.1):
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - ZXLBaseLibrary/ZXLExtension
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
+  - ZXLBaseLibrary/ZXLCustom/ZXLTableView (1.0.1):
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - ZXLBaseLibrary/ZXLCustom/ZXLCustomVC
+    - ZXLBaseLibrary/ZXLExtension
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
   - ZXLBaseLibrary/ZXLExtension (1.0.1)
   - ZXLBaseLibrary/ZXLImagePicker (1.0.1):
     - SVProgressHUD
@@ -58,8 +126,11 @@ PODS:
   - ZXLBaseLibrary/ZXLThirdParty (1.0.1)
   - ZXLBaseLibrary/ZXLUploadDownload (1.0.1)
   - ZXLBaseLibrary/ZXLUtils (1.0.1)
-  - ZXLBaseLibrary/ZXLVoice (1.0.1)
-  - ZXLBaseLibrary/ZXLWeb (1.0.1)
+  - ZXLBaseLibrary/ZXLVoice (1.0.1):
+    - ZXLBaseLibrary/ZXLExtension
+  - ZXLBaseLibrary/ZXLWeb (1.0.1):
+    - SDWebImage
+    - ZXLBaseLibrary/ZXLCustom/ZXLCustomVC
 
 DEPENDENCIES:
   - ZXLBaseLibrary (from `./ZXLBaseLibrary.podspec`)
@@ -70,6 +141,8 @@ SPEC REPOS:
     - Bugly
     - CocoaAsyncSocket
     - Masonry
+    - MJRefresh
+    - SDWebImage
     - SVProgressHUD
 
 EXTERNAL SOURCES:
@@ -81,8 +154,10 @@ SPEC CHECKSUMS:
   Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  ZXLBaseLibrary: d655113339e72c4b362b528633c3f1e64f5ff07d
+  ZXLBaseLibrary: 928d177b32271c7c04e64185917e2038ab8db13e
 
 PODFILE CHECKSUM: c32e4913cb859b3684dea04935f731ec998477f3
 

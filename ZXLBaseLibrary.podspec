@@ -24,6 +24,41 @@ Pod::Spec.new do |s|
   #基础自定义VC +View
   s.subspec 'ZXLCustom' do |ss|
       ss.source_files = 'ZXLBaseLibrary/Classes/Custom/*.{h,m}'
+      ss.subspec 'ZXLCustomView' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/CustomView/*.{h,m}'
+      end
+      
+      ss.subspec 'ZXLCustomVC' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/CustomVC/*.{h,m}'
+      end
+      
+      ss.subspec 'ZXLPopTips' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/PopTips/*.{h,m}'
+      end
+      
+      ss.subspec 'ZXLTableView' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/TableView/*.{h,m}'
+          sss.dependency 'ZXLBaseLibrary/ZXLCustom/ZXLCustomVC'
+      end
+      
+      ss.subspec 'ZXLPopMenu' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/PopMenu/*.{h,m}'
+          sss.dependency 'ZXLBaseLibrary/ZXLCustom/ZXLTableView'
+      end
+      
+      ss.subspec 'ZXLActionSheet' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/ActionSheet/*.{h,m}'
+          sss.dependency 'ZXLBaseLibrary/ZXLCustom/ZXLTableView'
+      end
+      
+      ss.dependency 'ZXLBaseLibrary/ZXLExtension'
+      ss.dependency 'ZXLBaseLibrary/ZXLRouter'
+      ss.dependency 'ZXLBaseLibrary/ZXLUtils'
+      ss.dependency 'MJRefresh'
+      ss.dependency 'Masonry'
+      ss.dependency 'SDWebImage'
+      ss.dependency 'SVProgressHUD'
+      ss.frameworks = 'UIKit','Foundation','MessageUI'
   end
   
   #设置中心
@@ -51,6 +86,8 @@ Pod::Spec.new do |s|
   #网页处理中心（jsbridge 和网页请求拦截处理）
   s.subspec 'ZXLWeb' do |ss|
       ss.source_files = 'ZXLBaseLibrary/Classes/Web/*.{h,m}'
+      ss.dependency 'ZXLBaseLibrary/ZXLCustom/ZXLCustomVC'
+      ss.dependency 'SDWebImage'
   end
   #播放器
   s.subspec 'ZXLPlayer' do |ss|
