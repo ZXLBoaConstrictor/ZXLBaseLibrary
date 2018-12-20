@@ -63,7 +63,7 @@
     return returnValue;
 }
 
-- (NSString *)disable_emoji{
+- (NSString *)disableEmoji{
     if (self == nil || [self length] < 1)  return @"";
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]" options:NSRegularExpressionCaseInsensitive error:nil];
@@ -202,6 +202,9 @@
     return nil;
 }
 
+-(NSString *)trimmingCharactersInSet:(NSCharacterSet *)set{
+    return [self stringByTrimmingCharactersInSet:set];
+}
 
 +(NSString *)randomNumber{
     NSInteger timeInterval = [NSDate date].timeIntervalSince1970 * 1000000;

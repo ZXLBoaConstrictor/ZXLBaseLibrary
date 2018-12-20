@@ -152,7 +152,6 @@
     
     //这里转要用格林威治标准时间
     NSCalendar *calender = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
-    calender.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
     return [calender dateFromComponents:components];
 }
 
