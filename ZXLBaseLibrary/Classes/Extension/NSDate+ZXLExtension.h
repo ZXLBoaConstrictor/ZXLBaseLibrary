@@ -80,6 +80,26 @@
  */
 + (NSDate *)mothFirstDayWithNextMonth:(NSDate *)date;
 
+
+/**
+ 某年某月有多少天
+ 
+ @param month 月
+ @param year 年
+ @return 天数
+ */
++ (NSUInteger)daysInMonth:(NSUInteger)month ofYear:(NSUInteger)year;
+
+/**
+ 某年某月的第一天是星期几
+ 
+ @param month 月
+ @param year 年
+ @return 星期几
+ */
++ (NSUInteger)firstWeekdayInMonth:(NSUInteger)month ofYear:(NSUInteger)year;
+
+
 /**
  NSDateComponents 类型转 NSDate
  @param components NSDateComponents
@@ -109,4 +129,13 @@
  @return 时间显示
  */
 +(NSString *)doubleTimeChangeToShowString:(double)dTime;
+
+/**
+ 星期转中文字符串
+ 
+ @param weekday 星期几
+ @return 中文字符串
+ */
++ (NSString *)stringOfWeekdayInChinese:(NSUInteger)weekday;
+
 @end

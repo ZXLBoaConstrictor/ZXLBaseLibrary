@@ -155,6 +155,16 @@
     return [calender dateFromComponents:components];
 }
 
++ (NSUInteger)daysInMonth:(NSUInteger)month ofYear:(NSUInteger)year {
+    NSDate *date = [NSDate mothFirstDayWithMonth:month year:year];
+    return [[NSDate localCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
+}
+
++ (NSUInteger)firstWeekdayInMonth:(NSUInteger)month ofYear:(NSUInteger)year {
+    NSDate *date = [NSDate mothFirstDayWithMonth:month year:year];
+    return [[NSDate localCalendar] component:NSCalendarUnitWeekday fromDate:date];
+}
+
 + (NSDateComponents *)dateComponentsFromDate:(NSDate *)date{
     if (!date) return nil;
     
@@ -212,5 +222,17 @@
     return @"";
 }
 
++ (NSString *)stringOfWeekdayInChinese:(NSUInteger)weekday{
+    
+    if (weekday < 1 || weekday > 7) {
+        return @"";
+    }
+    static NSArray *Strings;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Strings = @[@"日", @"一", @"二", @"三", @"四", @"五", @"六"];
+    });
+    return Strings[weekday - 1];
+}
 
 @end
