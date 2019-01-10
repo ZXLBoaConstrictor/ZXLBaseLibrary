@@ -24,6 +24,12 @@ typedef NS_ENUM(NSUInteger, ZXLButtonEdgeInsetsStyle) {
 };
 
 @interface UIButton (ZXLExtension)
+
+/**
+ 按钮防重点击间隔时间 (默认时间间隔 1.0)
+ */
+@property (nonatomic, assign) NSTimeInterval eventInterval;
+
 /**
  *  设置button的titleLabel和imageView的布局样式，及间距
  *  (注：此函数一定要在button 的title 和image 设置完成后使用)

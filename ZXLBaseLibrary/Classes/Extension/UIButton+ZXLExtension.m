@@ -8,8 +8,52 @@
 
 #import "UIButton+ZXLExtension.h"
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
+
+static char * const eventIntervalKey = "eventIntervalKey";
+static char * const eventUnavailableKey = "eventUnavailableKey";
+@interface UIButton ()
+@property (nonatomic, assign) BOOL eventUnavailable;
+@end
 
 @implementation UIButton (ZXLExtension)
+
++ (void)load {
+    Method method = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
+    Method qi_method = class_getInstanceMethod(self, @selector(extensionSendAction:to:forEvent:));
+    method_exchangeImplementations(method, qi_method);
+}
+
+
+#pragma mark - Action functions
+
+- (void)extensionSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
+    if (self.eventUnavailable == NO) {
+        self.eventUnavailable = YES;
+        [self extensionSendAction:action to:target forEvent:event];
+        [self performSelector:@selector(setEventUnavailable:) withObject:@(NO) afterDelay:MAX(self.eventInterval, 1.0)];
+    }
+}
+
+
+#pragma mark - Setter & Getter functions
+
+- (NSTimeInterval)eventInterval {
+    return [objc_getAssociatedObject(self, eventIntervalKey) doubleValue];
+}
+
+- (void)setEventInterval:(NSTimeInterval)eventInterval {
+    objc_setAssociatedObject(self, eventIntervalKey, @(eventInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)eventUnavailable {
+    return [objc_getAssociatedObject(self, eventUnavailableKey) boolValue];
+}
+
+- (void)setEventUnavailable:(BOOL)eventUnavailable {
+    objc_setAssociatedObject(self, eventUnavailableKey, @(eventUnavailable), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 - (void)layoutButtonWithEdgeInsetsStyle:(ZXLButtonEdgeInsetsStyle)style
                              buttonSize:(CGSize)bsize
                               imageSize:(CGSize)size
