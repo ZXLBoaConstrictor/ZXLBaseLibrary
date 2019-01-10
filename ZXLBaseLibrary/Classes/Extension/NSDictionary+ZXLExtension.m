@@ -6,8 +6,63 @@
 //
 
 #import "NSDictionary+ZXLExtension.h"
+#import "NSObject+ZXLExtension.h"
 
 @implementation NSDictionary (ZXLExtension)
++ (void)load {
+    if (!DEBUG_FLAG) {
+        [objc_getClass("__NSDictionaryI") zxlSwizzleMethod:@selector(objectForKey:) swizzledSelector:@selector(replace_objectForKey:)];
+        [objc_getClass("__NSDictionaryI") zxlSwizzleMethod:@selector(length) swizzledSelector:@selector(replace_length)];
+        [objc_getClass("__NSDictionaryM") zxlSwizzleMethod:@selector(setObject:forKey:) swizzledSelector:@selector(replace_setObject:forKey:)];
+        [objc_getClass("__NSDictionaryM") zxlSwizzleMethod:@selector(setObject:forKeyedSubscript:) swizzledSelector:@selector(replace_setObject:forKeyedSubscript:)];
+        [objc_getClass("__NSPlaceholderDictionary") zxlSwizzleMethod:@selector(initWithObjects:forKeys:count:)
+                                                  swizzledSelector:@selector(replace_initWithObjects:forKeys:count:)];
+    }
+}
+
+- (id)replace_objectForKey:(NSString *)key {
+    if ([self isKindOfClass:[NSDictionary class]]) {
+        return [self replace_objectForKey:key];
+    }
+    return nil;
+}
+
+- (void)replace_setObject:(id)anObject forKey:(id<NSCopying>)aKey {
+    @try {
+        [self replace_setObject:anObject forKey:aKey];
+    }
+    @catch (NSException *exception) {
+        ZXLLogError(exception);
+    }
+}
+
+- (instancetype)replace_initWithObjects:(id  _Nonnull const [])objects forKeys:(id<NSCopying>  _Nonnull const [])keys count:(NSUInteger)cnt {
+    id dictionary = nil;
+    @try {
+        dictionary = [self replace_initWithObjects:objects
+                                           forKeys:keys
+                                             count:cnt];
+    }
+    @catch (NSException *exception) {
+        ZXLLogError(exception);
+        dictionary = nil;
+    }
+    return dictionary;
+}
+
+- (NSUInteger)py_replace_length {
+    return 0;
+}
+
+- (void)replace_setObject:(id)obj forKeyedSubscript:(id<NSCopying>)key {
+    @try {
+        [self replace_setObject:obj forKeyedSubscript:key];
+    }
+    @catch (NSException *exception) {
+        ZXLLogError(exception);
+    }
+}
+
 - (NSString*)JSONString{
     NSError* error = nil;
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:self

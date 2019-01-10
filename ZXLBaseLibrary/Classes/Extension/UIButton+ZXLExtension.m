@@ -8,7 +8,7 @@
 
 #import "UIButton+ZXLExtension.h"
 #import <Foundation/Foundation.h>
-#import <objc/runtime.h>
+#import "NSObject+ZXLExtension.h"
 
 static char * const eventIntervalKey = "eventIntervalKey";
 static char * const eventUnavailableKey = "eventUnavailableKey";
@@ -19,13 +19,21 @@ static char * const eventUnavailableKey = "eventUnavailableKey";
 @implementation UIButton (ZXLExtension)
 
 + (void)load {
-    Method method = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
-    Method qi_method = class_getInstanceMethod(self, @selector(extensionSendAction:to:forEvent:));
-    method_exchangeImplementations(method, qi_method);
+    [[self class] zxlSwizzleMethod:@selector(sendAction:to:forEvent:) swizzledSelector:@selector(extensionSendAction:to:forEvent:)];
+    if (!DEBUG_FLAG) {
+        [[self class] zxlSwizzleMethod:@selector(setTitle:forState:) swizzledSelector:@selector(replace_setTitle:forState:)];
+    }
 }
 
 
 #pragma mark - Action functions
+- (void)replace_setTitle:(NSString *)title forState:(UIControlState)state {
+    if([title isKindOfClass:[NSNull class]]) {
+        [self replace_setTitle:nil forState:state];
+    }else {
+        [self replace_setTitle:title forState:state];
+    }
+}
 
 - (void)extensionSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     if (self.eventUnavailable == NO) {

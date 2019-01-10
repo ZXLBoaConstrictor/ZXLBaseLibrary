@@ -97,7 +97,7 @@
     BOOL isEmoj = NO;
     if (!self.bEmoji) {
         isEmoj = [toBeString stringContainsEmoji];
-        toBeString = [toBeString disable_emoji];
+        toBeString = [toBeString disableEmoji];
     }
     
     if (self.fontCount > 0) {

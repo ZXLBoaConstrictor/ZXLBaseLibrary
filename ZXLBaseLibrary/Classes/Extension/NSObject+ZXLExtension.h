@@ -7,17 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ZXLExtensionLog.h"
+#import <objc/runtime.h>
 @interface NSObject (ZXLExtension)
-- (id)ZXLPerformSelector:(NSString *)aSelectorName;
-- (id)ZXLPerformSelector:(NSString *)aSelectorName withObject:(id)object;
-- (id)ZXLPerformSelector:(NSString *)aSelectorName withObject:(id)object1 withObject:(id)object2;
-- (BOOL)ZXLObserverKeyPath:(NSString *)key;
+- (id)zxlPerformSelector:(NSString *)aSelectorName;
+- (id)zxlPerformSelector:(NSString *)aSelectorName withObject:(id)object;
+- (id)zxlPerformSelector:(NSString *)aSelectorName withObject:(id)object1 withObject:(id)object2;
+- (BOOL)zxlObserverKeyPath:(NSString *)key;
 
 /**
  IMP 函数交换通用处理
  @param originalSelector 原函数
  @param swizzledSelector 交换函数
  */
-+ (void)ZXLSwizzleSelector:(SEL)originalSelector withSwizzledSelector:(SEL)swizzledSelector;
++ (void)zxlSwizzleMethod:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector;
+
++ (void)zxlSwizzleClassMethod:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector;
 @end

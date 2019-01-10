@@ -76,7 +76,7 @@
     
     NSString *toBeString = textField.text;
     BOOL isEmoj = [toBeString stringContainsEmoji];
-    toBeString = [toBeString disable_emoji];
+    toBeString = [toBeString disableEmoji];
     
     if (isEmoj) {
         textField.text = toBeString;

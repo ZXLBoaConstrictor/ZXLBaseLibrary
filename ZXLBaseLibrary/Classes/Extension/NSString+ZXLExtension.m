@@ -8,9 +8,33 @@
 
 #import "NSString+ZXLExtension.h"
 #include <CommonCrypto/CommonDigest.h>
+#import "NSObject+ZXLExtension.h"
+
 #define FileHashDefaultChunkSizeForReadingData 1024*8
 
 @implementation NSString (ZXLExtension)
++ (void)load {
+    if (!DEBUG_FLAG) {
+        [objc_getClass("__NSCFConstantString") zxlSwizzleMethod:@selector(stringByAppendingString:) swizzledSelector:@selector(replace_stringByAppendingString:)];
+        [objc_getClass("NSTaggedPointerString") zxlSwizzleMethod:@selector(stringByAppendingString:) swizzledSelector:@selector(replaceUi_stringByAppendingString:)];
+    }
+}
+
+- (NSString*)replace_stringByAppendingString:(NSString *)aString {
+    if (!aString) {
+        aString = @"";
+        ZXLLog(@"Error:[__NSCFString stringByAppendingString:]: nil argument");
+    }
+    return [self replace_stringByAppendingString:aString];
+}
+
+- (NSString*)replaceUi_stringByAppendingString:(NSString *)aString {
+    if (!aString) {
+        aString = @"";
+        ZXLLog(@"Error:[NSTaggedPointerString stringByAppendingString:]: nil argument");
+    }
+    return [self replaceUi_stringByAppendingString:aString];
+}
 
 -(NSArray<NSTextCheckingResult *> *)detectorTypeLinkCheck{
     if (self == nil || [self length] < 1)  return nil;

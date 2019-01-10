@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIView+WebCache.h>
+#import <ZXLBaseLibrary/ZXLExtensionModule.h>
 @interface ViewController ()
 
 @end
@@ -18,11 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString * str = @"  aa aa   ";
-    NSCharacterSet  *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-    str = [str stringByTrimmingCharactersInSet:set];
-
-    NSLog(@"%@",str);
+    NSMutableDictionary *pDict = [NSMutableDictionary dictionary];
+    [pDict setObject:nil forKey:@"1"];
+    
+    NSMutableDictionary *pDict1 = [NSMutableDictionary dictionary];
+    [pDict1 setObject:nil forKey:@"2"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
