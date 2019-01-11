@@ -9,7 +9,4 @@
 
 @interface NSArray (ZXLExtension)
 - (NSString*)JSONString;
-- (NSString *)stringAtIndex:(NSUInteger)index;
-- (NSArray *)arrayAtIndex:(NSUInteger)index;
-- (NSDictionary *)dictionaryAtIndex:(NSUInteger)index;
 @end

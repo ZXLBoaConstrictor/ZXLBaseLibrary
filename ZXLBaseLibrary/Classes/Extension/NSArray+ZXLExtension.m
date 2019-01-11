@@ -6,8 +6,15 @@
 //
 
 #import "NSArray+ZXLExtension.h"
+#import "NSObject+ZXLExtension.h"
 
 @implementation NSArray (ZXLExtension)
++ (void)load{
+    if (!DEBUG_FLAG) {
+        [[self class] zxlSwizzleMethod:@selector(objectAtIndex:) swizzledSelector:@selector(replace_objectAtIndex:)];
+    }
+}
+
 - (NSString*)JSONString{
     NSError* error = nil;
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:self
@@ -19,51 +26,12 @@
     return nil;
 }
 
-- (NSString *)stringAtIndex:(NSUInteger)index{
-    int  nTmp = 0;
-    if (index < nTmp || index >= [self count] || [self count] == 0){
-        return @"";
-    }
-    
-    
-    id Value = [self objectAtIndex:index];
-    if ((NSNull *)Value != [NSNull null] && [Value isKindOfClass:[NSString class]]){
-        if ((NSString *)Value != nil && [(NSString *)Value length] > 0){
-            return (NSString *)Value;
-        }
-    }
-    
-    if ((NSNull *)Value != [NSNull null] && [Value isKindOfClass:[NSNumber class]]){
-        return [NSString stringWithFormat:@"%ld",[Value longValue]];
-    }
-    
-    return @"";
-}
-
-- (NSArray *)arrayAtIndex:(NSUInteger)index{
-    int  nTmp = 0;
-    if (index < nTmp || index >= [self count] || [self count] == 0){
+- (id)replace_objectAtIndex:(NSUInteger)index{
+    if (index < 0 || index >= [self count] || [self count] == 0){
         return nil;
     }
     
-    id Value = [self objectAtIndex:index];
-    if ((NSNull *)Value != [NSNull null] && [Value isKindOfClass:[NSArray class]]){
-        return (NSArray *)Value;
-    }
-    
-    return nil;
+   return [self replace_objectAtIndex:index];
 }
 
-- (NSDictionary *)dictionaryAtIndex:(NSUInteger)index{
-    int  nTmp = 0;
-    if (index < nTmp || index >= [self count] || [self count] == 0){
-        return nil;
-    }
-    
-    id Value = [self objectAtIndex:index];
-    if ((NSNull *)Value != [NSNull null] && [Value isKindOfClass:[NSDictionary class]]){
-        return (NSDictionary *)Value;
-    }
-    return nil;
-}
 @end
