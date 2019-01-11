@@ -70,7 +70,7 @@
     CGFloat startX = 0;
 
     for (NSInteger i = 0;i < ayswitch.count;i++) {
-        NSDictionary *pDict = [ayswitch dictionaryAtIndex:i];
+        NSDictionary *pDict = [ayswitch objectAtIndex:i];
         if (ZXLUtilsISDictionaryValid(pDict)) {
             
             startX += btnWidth;
