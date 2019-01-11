@@ -7,11 +7,13 @@
 #ifndef ZXLExtensionLog_h
 #define ZXLExtensionLog_h
 
-#ifdef DEBUG
-#define DEBUG_FLAG YES
-#else
 #define DEBUG_FLAG NO
-#endif
+
+//#ifdef DEBUG
+//#define DEBUG_FLAG YES
+//#else
+//#define DEBUG_FLAG NO
+//#endif
 
 #ifdef DEBUG
 #define ZXLLog(fmt,...) NSLog((@"\n\n[codeLine]%d\n" "[functionName]%s\n" "[Log]" fmt"\n"),__LINE__,__FUNCTION__,##__VA_ARGS__);

@@ -20,6 +20,14 @@
 #import "NSArray+ZXLExtension.h"
 #import "NSDictionary+ZXLExtension.h"
 #import "UIColor+ZXLExtension.h"
+#import "NSJSONSerialization+ZXLExtension.h"
+#import "NSMutableAttributedString+ZXLExtension.h"
+#import "NSMutableString+ZXLExtension.h"
+#import "NSNull+ZXLExtension.h"
+#import "NSUserDefaults+ZXLExtension.h"
+#import "UILabel+ZXLExtension.h"
+#import "UITextField+ZXLExtension.h"
+#import "WKWebView+ZXLExtension.h"
 #import "UIViewController+ZXLExtension.h"
 
 #endif /* ZXLExtensionModule_h */
