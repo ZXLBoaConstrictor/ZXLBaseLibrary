@@ -25,7 +25,10 @@
 - (BOOL)isYesterday{
     if (!self)  return NO;
     
-    NSDateComponents *comps = [[NSDate localCalendar] components:NSCalendarUnitDay fromDate:[NSDate today] toDate:self options:0];
+    NSDateComponents * compsTemp = [NSDate dateComponentsFromDate:self];
+    NSDate *dateTemp = [NSDate dateWithMonth:compsTemp.month day:compsTemp.day year:compsTemp.year];
+    
+    NSDateComponents *comps = [[NSDate localCalendar] components:NSCalendarUnitDay fromDate:[NSDate today] toDate:dateTemp options:0];
     return (comps.day + 1 == 0);
 }
 

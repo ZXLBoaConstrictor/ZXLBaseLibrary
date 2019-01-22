@@ -19,11 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableDictionary *pDict = [NSMutableDictionary dictionary];
-    [pDict setObject:nil forKey:@"1"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSDate *datestr = [dateFormatter dateFromString:@"2019-01-21 00:00:00"];
     
-    NSMutableDictionary *pDict1 = [NSMutableDictionary dictionary];
-    [pDict1 setObject:nil forKey:@"2"];
+    if (datestr.isYesterday) {
+        NSLog(@"isYesterday");
+    }
+  
     // Do any additional setup after loading the view, typically from a nib.
 }
 
