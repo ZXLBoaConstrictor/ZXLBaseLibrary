@@ -42,4 +42,5 @@
  */
 + (UIImage *)createImageWithText:(NSString *)text bgColor:(UIColor*)bgColor size:(CGSize)size;
 
++(UIImage *)createRoundedRectImage:(UIImage*)image withCornerRadius:(CGFloat)cornerRadius;
 @end

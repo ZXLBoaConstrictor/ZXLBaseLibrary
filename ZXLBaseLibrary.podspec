@@ -51,6 +51,11 @@ Pod::Spec.new do |s|
           sss.dependency 'ZXLBaseLibrary/ZXLCustom/ZXLTableView'
       end
       
+      ss.subspec 'ZXLHorizontalView' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/HorizontalView/*.{h,m}'
+          sss.dependency 'ZXLBaseLibrary/ZXLCustom/ZXLCustomView'
+      end
+      
       ss.dependency 'ZXLBaseLibrary/ZXLExtension'
       ss.dependency 'ZXLBaseLibrary/ZXLRouter'
       ss.dependency 'ZXLBaseLibrary/ZXLUtils'

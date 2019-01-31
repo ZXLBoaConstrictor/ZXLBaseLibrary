@@ -105,6 +105,15 @@
 
             ]
           }
+        },
+        {
+          "name": "ZXLHorizontalView",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/HorizontalView/*.{h,m}",
+          "dependencies": {
+            "ZXLBaseLibrary/ZXLCustom/ZXLCustomView": [
+
+            ]
+          }
         }
       ]
     },
