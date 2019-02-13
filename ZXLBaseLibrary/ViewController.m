@@ -24,7 +24,7 @@
 }
 
 -(void)onTitleRight:(id)sender{
-    ZXLMessageBox(@"123123");
+    
 //    NSMutableArray *ayMenu = [NSMutableArray array];
 //    ZXLUIPopMenuModel *oneModel = [[ZXLUIPopMenuModel alloc] init];
 //    oneModel.title = @"第一个";

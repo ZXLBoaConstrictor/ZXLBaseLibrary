@@ -11,74 +11,74 @@
 #import <ZXLProgramSetting.h>
 #import <ZXLRouter.h>
 
-void ZXLMessageBox(id <NSObject> strMsg) {
-    ZXLMessageTitle(strMsg, nil);
+void ZXLUIAlertMessageBox(id <NSObject> message) {
+    ZXLUIAlertMessageTitle(message, nil);
 }
 
-void ZXLMessageTitle(id <NSObject> strMsg, NSString *strTitle) {
-    ZXLMessageBlock(strMsg, strTitle, nil, nil);
+void ZXLUIAlertMessageTitle(id <NSObject> message, NSString *title) {
+    ZXLUIAlertMessageBlock(message, title, nil, nil);
 }
 
-void ZXLMessageBlock(id <NSObject> strMsg, NSString *strTitle, NSArray *ayBtn, void (^block)(int)) {
-    ZXLMessageBlockWithDelegate(strMsg, strTitle, ayBtn, NO, nil, block);
+void ZXLUIAlertMessageBlock(id <NSObject> message, NSString *title, NSArray *buttons, void (^block)(int)) {
+    ZXLUIAlertMessageBlockWithDelegate(message, title, buttons, NO, nil, block);
 }
 
-void ZXLHTMLMessageBlock(id <NSObject> strMsg, NSString *strTitle, NSArray *ayBtn, void (^block)(int)) {
-    ZXLMessageBlockWithDelegate(strMsg, strTitle, ayBtn, YES, nil, block);
+void ZXLUIAlertHTMLMessageBlock(id <NSObject> message, NSString *title, NSArray *buttons, void (^block)(int)) {
+    ZXLUIAlertMessageBlockWithDelegate(message, title, buttons, YES, nil, block);
 }
 
-void ZXLMessageBlockWithDelegate(id <NSObject> strMsg, NSString *strTitle, NSArray *ayBtn, BOOL bHTML, id delegate, void (^block)(int)) {
-    NSCAssert(([strMsg isKindOfClass:[NSString class]] || [strMsg isKindOfClass:[NSAttributedString class]]), @"类型错误, strMsg必须是NSString或者NSAttributedString");
-    if (!([strMsg isKindOfClass:[NSString class]] || [strMsg isKindOfClass:[NSAttributedString class]])) {
+void ZXLUIAlertMessageBlockWithDelegate(id <NSObject> message, NSString *title, NSArray *buttons, BOOL bHTML, id delegate, void (^block)(int)) {
+    NSCAssert(([message isKindOfClass:[NSString class]] || [message isKindOfClass:[NSAttributedString class]]), @"类型错误, message必须是NSString或者NSAttributedString");
+    if (!([message isKindOfClass:[NSString class]] || [message isKindOfClass:[NSAttributedString class]])) {
         return;
     }
-    if (strTitle == nil || [strTitle length] < 1) {
-        strTitle = [NSString stringWithFormat:@"%@", @"温馨提示"];
+    if (title == nil || [title length] < 1) {
+        title = [NSString stringWithFormat:@"%@", @"温馨提示"];
     }
 
-    NSString *nsOk = @"确定";
-    NSString *nsCancel = @"";
-    if (ayBtn) {
-        if ([ayBtn count] == 2) {
-            nsCancel = ayBtn[0];
-            nsOk = ayBtn[1];
+    NSString *rightStr = @"确定";
+    NSString *leftStr = @"";
+    if (buttons) {
+        if ([buttons count] == 2) {
+            leftStr = buttons[0];
+            rightStr = buttons[1];
         }
 
-        if ([ayBtn count] == 1) {
-            nsOk = ayBtn[0];
+        if ([buttons count] == 1) {
+            rightStr = buttons[0];
         }
     }
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:strTitle message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
 
-    if ([strMsg isKindOfClass:[NSAttributedString class]]) {
-        [alertController setValue:strMsg forKey:@"attributedMessage"];
+    if ([message isKindOfClass:[NSAttributedString class]]) {
+        [alertController setValue:message forKey:@"attributedMessage"];
     } else {
         if (bHTML) {
-            NSAttributedString *messageAtt = [[NSAttributedString alloc] initWithData:[(NSString *)strMsg dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+            NSAttributedString *messageAtt = [[NSAttributedString alloc] initWithData:[(NSString *)message dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType} documentAttributes:nil error:nil];
             [alertController setValue:messageAtt forKey:@"attributedMessage"];
         } else {
-            alertController.message = (NSString *)strMsg;
+            alertController.message = (NSString *)message;
         }
     }
 
-    if (ZXLUtilsISNSStringValid(nsCancel)) {
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:nsCancel style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    if (ZXLUtilsISNSStringValid(leftStr)) {
+        UIAlertAction *leftAlert = [UIAlertAction actionWithTitle:leftStr style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             if (block) {
                 block(0);
             }
         }];
 
-        [cancel setValue:[ZXLProgramSetting tipsBlackColor] forKey:@"_titleTextColor"];
-        [alertController addAction:cancel];
+        [leftAlert setValue:[ZXLProgramSetting tipsBlackColor] forKey:@"_titleTextColor"];
+        [alertController addAction:leftAlert];
     }
 
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:nsOk style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    UIAlertAction *rightAlert = [UIAlertAction actionWithTitle:rightStr style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         if (block) {
             block(1);
         }
     }];
 
-    [ok setValue:[ZXLProgramSetting mainColor] forKey:@"_titleTextColor"];
-    [alertController addAction:ok];
+    [rightAlert setValue:[ZXLProgramSetting mainColor] forKey:@"_titleTextColor"];
+    [alertController addAction:rightAlert];
     [ZXLRouter presentViewController:alertController animated:YES completion:nil];
 }
