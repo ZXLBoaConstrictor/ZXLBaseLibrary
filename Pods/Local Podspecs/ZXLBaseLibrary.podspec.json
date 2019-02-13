@@ -76,10 +76,6 @@
           "source_files": "ZXLBaseLibrary/Classes/Custom/CustomVC/*.{h,m}"
         },
         {
-          "name": "ZXLPopTips",
-          "source_files": "ZXLBaseLibrary/Classes/Custom/PopTips/*.{h,m}"
-        },
-        {
           "name": "ZXLTableView",
           "source_files": "ZXLBaseLibrary/Classes/Custom/TableView/*.{h,m}",
           "dependencies": {
@@ -89,13 +85,8 @@
           }
         },
         {
-          "name": "ZXLPopMenu",
-          "source_files": "ZXLBaseLibrary/Classes/Custom/PopMenu/*.{h,m}",
-          "dependencies": {
-            "ZXLBaseLibrary/ZXLCustom/ZXLTableView": [
-
-            ]
-          }
+          "name": "ZXLPopView",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/PopView/*.{h,m}"
         },
         {
           "name": "ZXLActionSheet",

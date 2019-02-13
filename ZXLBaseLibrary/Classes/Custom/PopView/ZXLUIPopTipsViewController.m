@@ -16,23 +16,33 @@
 
 @implementation ZXLUIPopTipsViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(UILabel *)tipsLabel{
     if (!_tipsLabel) {
         _tipsLabel = ZXLNewObject(UILabel);
         _tipsLabel.textColor = [UIColor whiteColor];
-        _tipsLabel.text = self.tipsText;
         _tipsLabel.numberOfLines = 0;
         _tipsLabel.font = [UIFont systemFontOfSize:12.0f];
         [self.view addSubview:_tipsLabel];
         [_tipsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.equalTo(@(10*ViewScaleValue));
-            make.right.equalTo(self.view).offset(-10*ViewScaleValue);
-            make.bottom.equalTo(self.view).offset(-10*ViewScaleValue);
+            make.left.top.equalTo(@(EtalonSpacing));
+            make.right.equalTo(self.view).offset(-EtalonSpacing);
+            make.bottom.equalTo(self.view).offset(-EtalonSpacing);
         }];
     }
-    
+    return _tipsLabel;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
+    self. tipsLabel.text = self.tipsText;
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.view.superview.clipsToBounds = NO;
 }
 
 - (void)didReceiveMemoryWarning {

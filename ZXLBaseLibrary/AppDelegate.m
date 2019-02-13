@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
+#import <ZXLBaseLibrary/ZXLGlobalVariables.h>
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIViewController *mainVC = [[ViewController alloc] init];
+    UINavigationController *pNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    
+    self.window.rootViewController = pNav;
+    [self.window makeKeyAndVisible];
+    system_UINavigationController = pNav;
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f],NSForegroundColorAttributeName: [UIColor blackColor]} forState:UIControlStateNormal];
     return YES;
 }
 

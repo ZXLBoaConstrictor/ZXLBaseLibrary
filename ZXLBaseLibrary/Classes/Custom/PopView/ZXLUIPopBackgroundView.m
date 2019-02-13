@@ -1,19 +1,19 @@
 //
-//  ZXLTipsPopoverBackgroundView.m
+//  ZXLUIPopBackgroundView.m
 //  Compass
 //
 //  Created by xyt on 2018/2/9.
 //  Copyright © 2018年 ZXL. All rights reserved.
 //
 
-#import "ZXLTipsPopoverBackgroundView.h"
+#import "ZXLUIPopBackgroundView.h"
 #import <ZXLSettingDefined.h>
-@interface ZXLTipsPopoverBackgroundView()
+@interface ZXLUIPopBackgroundView()
 @property (nonatomic, assign) CGFloat fArrowOffset;
+@property (nonatomic, assign) UIPopoverArrowDirection direction;
 @end
 
-@implementation ZXLTipsPopoverBackgroundView
-
+@implementation ZXLUIPopBackgroundView
 
 //这个方法返回箭头宽度
 + (CGFloat)arrowBase{
@@ -27,22 +27,21 @@
 +(CGFloat)arrowHeight{
     return 5*ViewScaleValue;
 }
+
 //这个方法返回箭头的方向
 -(UIPopoverArrowDirection)arrowDirection{
-    
-    return UIPopoverArrowDirectionUp;
+    return self.direction;
 }
 //这个在设置箭头方向时被调用 可以监听做处理
 -(void)setArrowDirection:(UIPopoverArrowDirection)arrowDirection{
-    
+    self.direction = arrowDirection;
 }
 ////这个方法在设置箭头偏移量时被调用 可以监听做处理
 -(void)setArrowOffset:(CGFloat)arrowOffset{
     self.fArrowOffset = arrowOffset;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
@@ -51,16 +50,20 @@
 }
 
 //重写layout方法来来定义箭头样式
-- (void)layoutSubviews
-{
+- (void)layoutSubviews{
     [super layoutSubviews];
     
     self.layer.shadowOpacity = 0.2f;
-    
+    self.layer.cornerRadius = 2.0f;
     CGSize arrowSize = CGSizeMake([[self class] arrowBase], [[self class] arrowHeight]);
     UIImage * image  = [self drawArrowImage:arrowSize];
+    CGRect rect = CGRectMake((self.frame.size.width - arrowSize.width)/2 + self.fArrowOffset, 11*ViewScaleValue, arrowSize.width, arrowSize.height);
+    if (self.arrowDirection == UIPopoverArrowDirectionDown) {
+        rect.origin.y = self.frame.size.height - rect.size.height;
+    }
+    
     UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
-    imageView.frame = CGRectMake((self.frame.size.width - arrowSize.width)/2 + self.fArrowOffset, 11*ViewScaleValue, arrowSize.width, arrowSize.height);
+    imageView.frame = rect;
     [self addSubview:imageView];
 }
 
@@ -71,9 +74,15 @@
     [[UIColor clearColor] setFill];
     CGContextFillRect(ctx, CGRectMake(0.0f, 0.0f, size.width, size.height));
     CGMutablePathRef arrowPath = CGPathCreateMutable();
-    CGPathMoveToPoint(arrowPath, NULL, (size.width/2.0f), 0.0f);
-    CGPathAddLineToPoint(arrowPath, NULL, size.width, size.height);
-    CGPathAddLineToPoint(arrowPath, NULL, 0.0f, size.height);
+    if (self.arrowDirection == UIPopoverArrowDirectionDown) {
+        CGPathMoveToPoint(arrowPath, NULL, 0.0f, 0.0f);
+        CGPathAddLineToPoint(arrowPath, NULL, size.width, 0.0f);
+        CGPathAddLineToPoint(arrowPath, NULL, (size.width/2.0f), size.height);
+    }else{
+        CGPathMoveToPoint(arrowPath, NULL, (size.width/2.0f), 0.0f);
+        CGPathAddLineToPoint(arrowPath, NULL, size.width, size.height);
+        CGPathAddLineToPoint(arrowPath, NULL, 0.0f, size.height);
+    }
     CGPathCloseSubpath(arrowPath);
     CGContextAddPath(ctx, arrowPath);
     CGPathRelease(arrowPath);

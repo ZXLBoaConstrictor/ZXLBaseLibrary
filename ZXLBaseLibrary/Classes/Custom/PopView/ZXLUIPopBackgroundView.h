@@ -1,5 +1,5 @@
 //
-//  ZXLTipsPopoverBackgroundView.h
+//  ZXLUIPopBackgroundView.h
 //  Compass
 //
 //  Created by xyt on 2018/2/9.
@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZXLTipsPopoverBackgroundView : UIPopoverBackgroundView
+@interface ZXLUIPopBackgroundView : UIPopoverBackgroundView
 @end

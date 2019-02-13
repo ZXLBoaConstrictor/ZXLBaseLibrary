@@ -1,31 +1,34 @@
 //
-//  ZXLPopMenuCell.m
+//  ZXLUIPopMenuCell.m
 //  Compass
 //
 //  Created by 张小龙 on 2017/7/19.
 //  Copyright © 2017年 ZXL. All rights reserved.
 //
 
-#import "ZXLPopMenuCell.h"
-#import "ZXLPopMenuSettingModel.h"
-#import "ZXLUtilsDefined.h"
-#import "ZXLSettingDefined.h"
-#import "ZXLProgramSetting.h"
+#import "ZXLUIPopMenuCell.h"
+#import "ZXLUIPopMenuModel.h"
+#import <ZXLSettingDefined.h>
 #import <UIImage+ZXLExtension.h>
 #import <Masonry/Masonry.h>
 
-@interface ZXLPopMenuCell()
+@interface ZXLUIPopMenuCell()
 @property(nonatomic,strong) UIImageView                 * iconView;
 @property(nonatomic,strong) UILabel                     * titleLabel;
 @property(nonatomic,strong) UIView                     * lineView;
 @end
-@implementation ZXLPopMenuCell
+@implementation ZXLUIPopMenuCell
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]){
+        [self setUpUI];
+    }
+    return self;
+}
 
 //cell UI creat
--(void)setUpUI
-{
+-(void)setUpUI{
     if (_iconView == nil) {
-        _iconView = ZXLNewObject(UIImageView);
+        _iconView = [[UIImageView alloc] init];
         [self addSubview:_iconView];
         [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.height.equalTo(@(20*ViewScaleValue));
@@ -35,21 +38,22 @@
     }
     
     if (_titleLabel == nil) {
-        _titleLabel = ZXLNewObject(UILabel);
-        _titleLabel.textColor = [ZXLProgramSetting tipsBlackColor];
+        _titleLabel = [[UILabel alloc] init];
+        _titleLabel.textColor = [UIColor whiteColor];
         _titleLabel.font = [UIFont systemFontOfSize:15.0f];
         _titleLabel.adjustsFontSizeToFitWidth = YES;
         [self addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self->_iconView.mas_right).offset(20*ViewScaleValue);
-            make.top.height.equalTo(self->_iconView);
+            make.left.equalTo(@(46*ViewScaleValue));
+            make.height.equalTo(self->_iconView);
+            make.centerY.equalTo(self);
             make.right.equalTo(self.mas_right).offset(-EtalonSpacing);
         }];
     }
     
     if (_lineView == nil) {
-        _lineView = ZXLNewObject(UIView);
-        _lineView.backgroundColor = [ZXLProgramSetting lineColor];
+        _lineView = [[UIView alloc] init];
+        _lineView.backgroundColor = [UIColor whiteColor];
         [self addSubview:_lineView];
         [_lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@(1*ViewScaleValue));
@@ -61,20 +65,16 @@
 }
 
 //cell set data
--(void)setCellData:(id)data line:(BOOL)bhidden{
-    if (data && [data isKindOfClass:[ZXLPopMenuSettingModel class]]) {
-        
-        ZXLPopMenuSettingModel *model = (ZXLPopMenuSettingModel *)data;
-        
-        if (ZXLUtilsISNSStringValid(model.icon)) {
+-(void)setCellData:(id)data line:(BOOL)hidden{
+    if (data && [data isKindOfClass:[ZXLUIPopMenuModel class]]) {
+        ZXLUIPopMenuModel *model = (ZXLUIPopMenuModel *)data;
+        if (model.icon && model.icon.length > 0) {
            [_iconView setImage:[UIImage ZXLImageNamed:model.icon]];
             
             [_titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.left.equalTo(self->_iconView.mas_right).offset(20*ViewScaleValue);
- 
             }];
-        }else
-        {
+        }else{
             [_titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.left.equalTo(@(EtalonSpacing));
             }];
@@ -93,7 +93,7 @@
             _titleLabel.font = model.font;
         }
         
-        _lineView.hidden = bhidden;
+        _lineView.hidden = hidden;
     }
 }
 

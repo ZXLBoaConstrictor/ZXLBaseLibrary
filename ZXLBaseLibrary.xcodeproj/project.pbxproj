@@ -10,7 +10,6 @@
 		68FD4A5782AAA9FF75B3A376 /* libPods-ZXLBaseLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F355AF40A3C479C8CC82E7ED /* libPods-ZXLBaseLibrary.a */; };
 		8249B99A216CA2D9008D8613 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8249B999216CA2D9008D8613 /* AppDelegate.m */; };
 		8249B99D216CA2D9008D8613 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8249B99C216CA2D9008D8613 /* ViewController.m */; };
-		8249B9A0216CA2D9008D8613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8249B99E216CA2D9008D8613 /* Main.storyboard */; };
 		8249B9A2216CA2DA008D8613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8249B9A1216CA2DA008D8613 /* Assets.xcassets */; };
 		8249B9A5216CA2DA008D8613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8249B9A3216CA2DA008D8613 /* LaunchScreen.storyboard */; };
 		8249B9A8216CA2DA008D8613 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8249B9A7216CA2DA008D8613 /* main.m */; };
@@ -42,7 +41,6 @@
 		8249B999216CA2D9008D8613 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8249B99B216CA2D9008D8613 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8249B99C216CA2D9008D8613 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8249B99F216CA2D9008D8613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8249B9A1216CA2DA008D8613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8249B9A4216CA2DA008D8613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8249B9A6216CA2DA008D8613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				8249B999216CA2D9008D8613 /* AppDelegate.m */,
 				8249B99B216CA2D9008D8613 /* ViewController.h */,
 				8249B99C216CA2D9008D8613 /* ViewController.m */,
-				8249B99E216CA2D9008D8613 /* Main.storyboard */,
 				8249B9A1216CA2DA008D8613 /* Assets.xcassets */,
 				8249B9A3216CA2DA008D8613 /* LaunchScreen.storyboard */,
 				8249B9A6216CA2DA008D8613 /* Info.plist */,
@@ -263,7 +260,6 @@
 			files = (
 				8249B9A5216CA2DA008D8613 /* LaunchScreen.storyboard in Resources */,
 				8249B9A2216CA2DA008D8613 /* Assets.xcassets in Resources */,
-				8249B9A0216CA2D9008D8613 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,14 +381,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8249B99E216CA2D9008D8613 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8249B99F216CA2D9008D8613 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8249B9A3216CA2DA008D8613 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -524,6 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T87C2R7MW;
 				INFOPLIST_FILE = ZXLBaseLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -542,6 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T87C2R7MW;
 				INFOPLIST_FILE = ZXLBaseLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

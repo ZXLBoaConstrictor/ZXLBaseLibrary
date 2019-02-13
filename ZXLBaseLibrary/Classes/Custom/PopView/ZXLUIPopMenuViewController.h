@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class ZXLPopMenuSettingModel;
-typedef void (^didSelect)(NSInteger index);
+@class ZXLUIPopMenuModel;
+typedef void (^ZXLUIPopMenuCompleteSelect)(NSInteger index);
 
 @interface ZXLUIPopMenuViewController : UIViewController<UIPopoverPresentationControllerDelegate>
-@property(nonatomic,strong)NSArray<ZXLPopMenuSettingModel *> *ayMenu;
-@property (nonatomic,copy)didSelect select;
+@property(nonatomic,strong)NSArray<ZXLUIPopMenuModel *> *menu;
+@property (nonatomic,copy)ZXLUIPopMenuCompleteSelect select;
+@property (nonatomic,assign)CGFloat cellHeight;
 @end

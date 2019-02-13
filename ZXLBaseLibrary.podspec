@@ -32,18 +32,13 @@ Pod::Spec.new do |s|
           sss.source_files = 'ZXLBaseLibrary/Classes/Custom/CustomVC/*.{h,m}'
       end
       
-      ss.subspec 'ZXLPopTips' do |sss|
-          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/PopTips/*.{h,m}'
-      end
-      
       ss.subspec 'ZXLTableView' do |sss|
           sss.source_files = 'ZXLBaseLibrary/Classes/Custom/TableView/*.{h,m}'
           sss.dependency 'ZXLBaseLibrary/ZXLCustom/ZXLCustomVC'
       end
       
-      ss.subspec 'ZXLPopMenu' do |sss|
-          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/PopMenu/*.{h,m}'
-          sss.dependency 'ZXLBaseLibrary/ZXLCustom/ZXLTableView'
+      ss.subspec 'ZXLPopView' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/PopView/*.{h,m}'
       end
       
       ss.subspec 'ZXLActionSheet' do |sss|

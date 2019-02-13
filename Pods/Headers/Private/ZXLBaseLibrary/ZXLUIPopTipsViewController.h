@@ -1,1 +1,1 @@
-../../../../ZXLBaseLibrary/Classes/Custom/PopTips/ZXLUIPopTipsViewController.h
+../../../../ZXLBaseLibrary/Classes/Custom/PopView/ZXLUIPopTipsViewController.h

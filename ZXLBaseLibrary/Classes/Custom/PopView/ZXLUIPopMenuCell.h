@@ -1,5 +1,5 @@
 //
-//  ZXLPopoverBackgroundView.h
+//  ZXLUIPopMenuCell.h
 //  Compass
 //
 //  Created by 张小龙 on 2017/7/19.
@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ZXLPopoverBackgroundView : UIPopoverBackgroundView
-
+@interface ZXLUIPopMenuCell : UITableViewCell
+-(void)setCellData:(id)data line:(BOOL)hidden;
 @end
