@@ -21,5 +21,3 @@ FOUNDATION_EXPORT  BOOL         system_showStart;//是否显示启动宣传页
 FOUNDATION_EXPORT  BOOL         system_advertisement;//客户端是否获取广告标志
 
 FOUNDATION_EXPORT  AFNetworkReachabilityStatus   system_networkstatus;
-
-FOUNDATION_EXPORT UINavigationController * system_UINavigationController;

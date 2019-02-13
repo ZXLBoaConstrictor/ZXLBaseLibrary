@@ -24,7 +24,6 @@
     
     self.window.rootViewController = pNav;
     [self.window makeKeyAndVisible];
-    system_UINavigationController = pNav;
     
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f],NSForegroundColorAttributeName: [UIColor blackColor]} forState:UIControlStateNormal];
     return YES;

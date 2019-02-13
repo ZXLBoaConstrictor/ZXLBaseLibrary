@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <ZXLBaseLibrary/ZXLUIPopViewManager.h>
 #import <ZXLBaseLibrary/ZXLUIPopMenuModel.h>
-#import <ZXLBaseLibrary/ZXLCustomUIFunction.h>
+#import <ZXLBaseLibrary/ZXLUIAlertMessage.h>
 @interface ViewController ()
 
 @end
@@ -24,28 +24,29 @@
 }
 
 -(void)onTitleRight:(id)sender{
-    NSMutableArray *ayMenu = [NSMutableArray array];
-    ZXLUIPopMenuModel *oneModel = [[ZXLUIPopMenuModel alloc] init];
-    oneModel.title = @"第一个";
-    oneModel.textAlignment = NSTextAlignmentCenter;
-    oneModel.font = [UIFont systemFontOfSize:12.0f];
-    oneModel.textColor = [UIColor redColor];
-    [ayMenu addObject:oneModel];
-    
-    ZXLUIPopMenuModel *tModel = [[ZXLUIPopMenuModel alloc] init];
-    tModel.title = @"第二个";
-    [ayMenu addObject:tModel];
-    
-    ZXLUIPopMenuModel *sModel = [[ZXLUIPopMenuModel alloc] init];
-    sModel.title = @"第三个";
-    [ayMenu addObject:sModel];
-    
-    ZXLUIPopMenuModel *fModel = [[ZXLUIPopMenuModel alloc] init];
-    fModel.title = @"第四个";
-    [ayMenu addObject:fModel];
-    
-    [ZXLUIPopViewManager showMenu:ayMenu width:80 cellHeight:43 cornerRadius:6 barButtonItem:sender complete:^(NSInteger index) {
-        
-    }];
+    ZXLMessageBox(@"123123");
+//    NSMutableArray *ayMenu = [NSMutableArray array];
+//    ZXLUIPopMenuModel *oneModel = [[ZXLUIPopMenuModel alloc] init];
+//    oneModel.title = @"第一个";
+//    oneModel.textAlignment = NSTextAlignmentCenter;
+//    oneModel.font = [UIFont systemFontOfSize:12.0f];
+//    oneModel.textColor = [UIColor redColor];
+//    [ayMenu addObject:oneModel];
+//
+//    ZXLUIPopMenuModel *tModel = [[ZXLUIPopMenuModel alloc] init];
+//    tModel.title = @"第二个";
+//    [ayMenu addObject:tModel];
+//
+//    ZXLUIPopMenuModel *sModel = [[ZXLUIPopMenuModel alloc] init];
+//    sModel.title = @"第三个";
+//    [ayMenu addObject:sModel];
+//
+//    ZXLUIPopMenuModel *fModel = [[ZXLUIPopMenuModel alloc] init];
+//    fModel.title = @"第四个";
+//    [ayMenu addObject:fModel];
+//
+//    [ZXLUIPopViewManager showMenu:ayMenu width:80 cellHeight:43 cornerRadius:6 barButtonItem:sender complete:^(NSInteger index) {
+//
+//    }];
 }
 @end

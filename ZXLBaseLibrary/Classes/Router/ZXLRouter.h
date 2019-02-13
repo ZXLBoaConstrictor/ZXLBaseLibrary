@@ -90,11 +90,9 @@ typedef id (^ZXLRouterBlock)(ZXLRouterCompleteBlock completeBlock,NSDictionary* 
 
 /**
  获取当前界面的主控制器
- 
- @param navigationController super 控制器
  @return 当前界面的主控制器
  */
-+(UINavigationController *)getTopUINavigationController:(UINavigationController *)navigationController;
++(UINavigationController *)currentTopNavigationController;
 
 /**
  获取当前控制器的最上层VC

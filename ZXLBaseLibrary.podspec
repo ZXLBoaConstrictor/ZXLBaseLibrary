@@ -41,6 +41,10 @@ Pod::Spec.new do |s|
           sss.source_files = 'ZXLBaseLibrary/Classes/Custom/PopView/*.{h,m}'
       end
       
+      ss.subspec 'ZXLAlertMessage' do |sss|
+          sss.source_files = 'ZXLBaseLibrary/Classes/Custom/AlertMessage/*.{h,m}'
+      end
+      
       ss.subspec 'ZXLActionSheet' do |sss|
           sss.source_files = 'ZXLBaseLibrary/Classes/Custom/ActionSheet/*.{h,m}'
           sss.dependency 'ZXLBaseLibrary/ZXLCustom/ZXLTableView'

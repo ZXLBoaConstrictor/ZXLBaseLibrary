@@ -42,10 +42,7 @@
     tipsVC.popoverPresentationController.popoverBackgroundViewClass = [ZXLUIPopBackgroundView class];
     //控制提示框大小
     tipsVC.preferredContentSize = CGSizeMake(contentWidth, contentHeight);
-    
-    UINavigationController *navigation = [ZXLRouter getTopUINavigationController:system_UINavigationController];
-    [navigation presentViewController:tipsVC animated:YES completion:nil];
-    
+    [ZXLRouter presentViewController:tipsVC animated:YES completion:nil];
     // 改变弹出框圆角.(一定要放在后面写，这里会调用viewDidLoad，如果不清楚可以去苹果官网看一些调用顺序)
     tipsVC.view.layer.cornerRadius = cornerRadius;
     tipsVC.view.layer.masksToBounds = YES;
@@ -73,9 +70,8 @@
     menuVC.popoverPresentationController.delegate = menuVC;
     //menu ContentSize
     menuVC.preferredContentSize = CGSizeMake(contentWidth, menu.count*cellHeight);
-    
-    UINavigationController *navigation = [ZXLRouter getTopUINavigationController:system_UINavigationController];
-    [navigation presentViewController:menuVC animated:YES completion:nil];
+
+    [ZXLRouter presentViewController:menuVC animated:YES completion:nil];
     //圆角设置
     menuVC.view.layer.cornerRadius = cornerRadius;
     menuVC.view.layer.masksToBounds = YES;

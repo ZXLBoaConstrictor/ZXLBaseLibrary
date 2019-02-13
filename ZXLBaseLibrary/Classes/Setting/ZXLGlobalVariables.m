@@ -18,5 +18,3 @@ BOOL            system_advertisement        = YES;//客户端是否获取广告�
 
 
 AFNetworkReachabilityStatus   system_networkstatus = 0;
-
-UINavigationController * system_UINavigationController = nil;

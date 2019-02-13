@@ -9,7 +9,6 @@
 #ifndef ZXLCustomUIModuleHeader_h
 #define ZXLCustomUIModuleHeader_h
 
-#import "ZXLCustomUIFunction.h"
 #import "ZXLEmptyView.h"
 #import "ZXLUITableView.h"
 #import "ZXLUIViewController.h"

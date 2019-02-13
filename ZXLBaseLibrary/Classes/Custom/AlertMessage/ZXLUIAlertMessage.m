@@ -1,12 +1,12 @@
 //
-//  ZXLCustomUIFunction.m
+//  ZXLUIAlertMessage.m
 //  ZXLCustomUIModule
 //
 //  Created by 张小龙 on 2018/6/28.
 //  Copyright © 2018年 张小龙. All rights reserved.
 //
 
-#import "ZXLCustomUIFunction.h"
+#import "ZXLUIAlertMessage.h"
 #import <ZXLUtilsDefined.h>
 #import <ZXLProgramSetting.h>
 #import <ZXLRouter.h>

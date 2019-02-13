@@ -46,6 +46,16 @@
     return _completeBlockMap;
 }
 
+-(UINavigationController *)navigationVC{
+    if (!_navigationVC) {
+        UIViewController *rootVC = [[UIApplication sharedApplication] keyWindow].rootViewController;
+        if (rootVC && [rootVC isKindOfClass:[UINavigationController class]]) {
+            _navigationVC = (UINavigationController *)rootVC;
+        }
+    }
+    return _navigationVC;
+}
+
 -(void)registerTo:(NSString *)routePattern handler:(ZXLRouterBlock)handlerBlock{
     NSAssert(routePattern, @"routePattern 不能为空");
     NSAssert(handlerBlock, @"handlerBlock 不能为空");
@@ -167,6 +177,10 @@
     return NO;
 }
 
++(UINavigationController *)currentTopNavigationController{
+    return [ZXLRouter getTopUINavigationController:[ZXLRouter manager].navigationVC];
+}
+
 + (UINavigationController *)getTopUINavigationController:(UINavigationController *)navigationController{
     UINavigationController * pNav = navigationController;
     if ([navigationController.presentedViewController isKindOfClass:[UINavigationController class]]){
@@ -183,7 +197,7 @@
 
 + (UIViewController *)getTopUIViewController{
     UIViewController *pVC = nil;
-    UINavigationController *pNav = [ZXLRouter getTopUINavigationController:[ZXLRouter manager].navigationVC];
+    UINavigationController *pNav = [ZXLRouter currentTopNavigationController];
     if (pNav){
         if (pNav.presentedViewController){
             pVC = pNav.presentedViewController;
@@ -199,7 +213,7 @@
 
 +(void)pushViewController:(UIViewController *)pVC animated:(BOOL)animated{
     //等支持多个聊天后再开启
-    UINavigationController * pNav = [ZXLRouter getTopUINavigationController:[ZXLRouter manager].navigationVC];
+    UINavigationController * pNav = [ZXLRouter currentTopNavigationController];
     if (pNav){
         //聊天界面重复判断--不允许有2个聊天界面
         if ([pVC isMemberOfClass:NSClassFromString(@"ZXLPrivateMessageVC")]) {
@@ -230,14 +244,14 @@
 }
 
 +(void)popViewController:(BOOL)animated{
-    UINavigationController * pNav = [ZXLRouter getTopUINavigationController:[ZXLRouter manager].navigationVC];
+    UINavigationController * pNav = [ZXLRouter currentTopNavigationController];
     if (pNav){
         [pNav popViewControllerAnimated:animated];
     }
 }
 
 +(void)popToViewController:(Class)vcClass animated:(BOOL)animated{
-    UINavigationController * pNav = [ZXLRouter getTopUINavigationController:[ZXLRouter manager].navigationVC];
+    UINavigationController * pNav = [ZXLRouter currentTopNavigationController];
     if (pNav){
         [pNav.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([obj isKindOfClass:vcClass]) {
@@ -249,7 +263,7 @@
 }
 
 +(void)popToViewFrontController:(Class)vcClass animated:(BOOL)animated{
-    UINavigationController * pNav = [ZXLRouter getTopUINavigationController:[ZXLRouter manager].navigationVC];
+    UINavigationController * pNav = [ZXLRouter currentTopNavigationController];
     if (pNav){
         [pNav.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([obj isKindOfClass:vcClass] && idx - 1 < [pNav.viewControllers count]) {
@@ -261,7 +275,7 @@
 }
 
 +(void)popViewControllerOnlyMainVC:(BOOL)animated{
-    UINavigationController * pNav = [ZXLRouter getTopUINavigationController:[ZXLRouter manager].navigationVC];
+    UINavigationController * pNav = [ZXLRouter currentTopNavigationController];
     if (pNav != [ZXLRouter manager].navigationVC){
         [pNav popToRootViewControllerAnimated: NO];
         [pNav.topViewController dismissViewControllerAnimated:NO completion:nil];
@@ -276,7 +290,7 @@
 }
 
 +(void)presentViewController:(UIViewController *)pVC animated:(BOOL)animated completion:(void (^)(void))completion{
-    UINavigationController * pNav = [ZXLRouter getTopUINavigationController:[ZXLRouter manager].navigationVC];
+    UINavigationController * pNav = [ZXLRouter currentTopNavigationController];
     if (pNav){
         [pNav presentViewController:pVC animated:animated completion:completion];
     }

@@ -55,6 +55,7 @@ PODS:
     - SDWebImage
     - SVProgressHUD
     - ZXLBaseLibrary/ZXLCustom/ZXLActionSheet (= 1.0.1)
+    - ZXLBaseLibrary/ZXLCustom/ZXLAlertMessage (= 1.0.1)
     - ZXLBaseLibrary/ZXLCustom/ZXLCustomVC (= 1.0.1)
     - ZXLBaseLibrary/ZXLCustom/ZXLCustomView (= 1.0.1)
     - ZXLBaseLibrary/ZXLCustom/ZXLHorizontalView (= 1.0.1)
@@ -69,6 +70,14 @@ PODS:
     - SDWebImage
     - SVProgressHUD
     - ZXLBaseLibrary/ZXLCustom/ZXLTableView
+    - ZXLBaseLibrary/ZXLExtension
+    - ZXLBaseLibrary/ZXLRouter
+    - ZXLBaseLibrary/ZXLUtils
+  - ZXLBaseLibrary/ZXLCustom/ZXLAlertMessage (1.0.1):
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
     - ZXLBaseLibrary/ZXLExtension
     - ZXLBaseLibrary/ZXLRouter
     - ZXLBaseLibrary/ZXLUtils
@@ -198,7 +207,7 @@ SPEC CHECKSUMS:
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
-  ZXLBaseLibrary: 966f62b55772d1735d7f8e5e190e0c9debd573f3
+  ZXLBaseLibrary: bbd4a8f16b48f805d8dc531d10d72f62492e1152
   ZXLUpload: 056d3d265225e7476f7c29bd1952686af83dacc6
 
 PODFILE CHECKSUM: c32e4913cb859b3684dea04935f731ec998477f3

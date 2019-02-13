@@ -89,6 +89,10 @@
           "source_files": "ZXLBaseLibrary/Classes/Custom/PopView/*.{h,m}"
         },
         {
+          "name": "ZXLAlertMessage",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/AlertMessage/*.{h,m}"
+        },
+        {
           "name": "ZXLActionSheet",
           "source_files": "ZXLBaseLibrary/Classes/Custom/ActionSheet/*.{h,m}",
           "dependencies": {
