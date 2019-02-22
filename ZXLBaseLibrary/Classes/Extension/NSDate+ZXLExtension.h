@@ -10,23 +10,19 @@
 
 @interface NSDate(ZXLExtension)
 
-/** 是否为今天 */
--(BOOL)isToday;
-
-/** 是否为昨天 */
-- (BOOL)isYesterday;
-
-/** 是否为本周内 */
-- (BOOL)isThisWeak;
-
-/** 是否为本月 */
-- (BOOL)isThisMonth;
-
-/** 是否为今年 */
-- (BOOL)isThisYear;
-
-/**本周星期几(注：中国式星期日为 7)*/
-- (NSInteger)weekDay;
+/// 获取指定date的详细信息
+@property (readonly) NSInteger year;    // 年
+@property (readonly) NSInteger month;   // 月
+@property (readonly) NSInteger day;     // 日
+@property (readonly) NSInteger hour;    // 时
+@property (readonly) NSInteger minute;  // 分
+@property (readonly) NSInteger second;  // 秒
+@property (readonly) NSInteger weekday; // 星期(转成了中国式 星期一（1）~星期日（7）)
+@property (readonly) BOOL isToday; //是否为今天
+@property (readonly) BOOL isYesterday; //是否为昨天
+@property (readonly) BOOL isThisWeak; // 是否为本周内
+@property (readonly) BOOL isThisMonth; // 是否为本月
+@property (readonly) BOOL isThisYear; //是否为今年
 
 /**
  今天 00：00 ：00  凌晨0时
@@ -34,14 +30,22 @@
  */
 +(NSDate *)today;
 
-/**
- 某年某月某日 转换为NSDate
- @param month 月
- @param day 日
- @param year 年
- @return NSDate
- */
-+ (NSDate *)dateWithMonth:(NSUInteger)month day:(NSUInteger)day year:(NSUInteger)year;
+/*时间组合器*/
++ (NSDate *)dateWithYear:(NSInteger)year;
+/** yyyy-MM */
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month;
+/** yyyy-MM-dd */
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
+/** yyyy-MM-dd HH*/
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour;
+/** yyyy-MM-dd HH:mm */
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute;
+/** MM-dd HH:mm */
++ (NSDate *)dateWithMonth:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute;
+/** MM-dd */
++ (NSDate *)dateWithMonth:(NSInteger)month day:(NSInteger)day;
+/** HH:mm */
++ (NSDate *)dateWithHour:(NSInteger)hour minute:(NSInteger)minute;
 
 /**本周星期一*/
 + (NSDate *)weekFirstDayWithToday;
@@ -58,7 +62,7 @@
  @param year 年
  @return NSDate
  */
-+ (NSDate *)mothFirstDayWithMonth:(NSUInteger)month year:(NSUInteger)year;
++ (NSDate *)mothFirstDayWithYear:(NSUInteger)year month:(NSUInteger)month;
 
 /**
  今天 所在月的第一天
@@ -138,4 +142,27 @@
  */
 + (NSString *)stringOfWeekdayInChinese:(NSUInteger)weekday;
 
+
+/**
+ 日期转字符串 （给定格式）
+
+ @param date 日期
+ @param format 格式字符串
+ @return 日期字符串
+ */
++ (NSString *)dateString:(NSDate *)date format:(NSString *)format;
+
+/**
+ 字符串转日期 （给定格式）
+
+ @param dateString 日期字符串
+ @param format g格式字符串
+ @return 日期
+ */
++ (NSDate *)date:(NSString *)dateString format:(NSString *)format;
+
+/**
+ *  比较两个时间大小（可以指定比较级数，即按指定格式进行比较）
+ */
+- (NSComparisonResult)compare:(NSDate *)targetDate format:(NSString *)format;
 @end

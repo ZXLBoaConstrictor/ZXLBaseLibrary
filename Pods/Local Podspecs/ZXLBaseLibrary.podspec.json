@@ -93,6 +93,10 @@
           "source_files": "ZXLBaseLibrary/Classes/Custom/AlertMessage/*.{h,m}"
         },
         {
+          "name": "ZXLPickerView",
+          "source_files": "ZXLBaseLibrary/Classes/Custom/PickerView/*.{h,m}"
+        },
+        {
           "name": "ZXLActionSheet",
           "source_files": "ZXLBaseLibrary/Classes/Custom/ActionSheet/*.{h,m}",
           "dependencies": {

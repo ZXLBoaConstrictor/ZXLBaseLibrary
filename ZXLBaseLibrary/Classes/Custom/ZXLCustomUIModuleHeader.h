@@ -13,7 +13,6 @@
 #import "ZXLUITableView.h"
 #import "ZXLUIViewController.h"
 #import "ZXLUITableViewViewController.h"
-#import "ZXLAlertView.h"
 #import "ZXLUITextField.h"
 #import "ZXLUITextView.h"
 #import "ZXLUISwitchView.h"
