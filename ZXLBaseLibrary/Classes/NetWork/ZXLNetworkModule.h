@@ -9,7 +9,7 @@
 #ifndef ZXLNetworkModule_h
 #define ZXLNetworkModule_h
 
-#import "ZXLAccountHeader.h"
+#import "ZXLHttpManager.h"
 #import "ZXLSocketManager.h"
 #import "ZXLAddressManager.h"
 #endif /* ZXLNetworkModule_h */

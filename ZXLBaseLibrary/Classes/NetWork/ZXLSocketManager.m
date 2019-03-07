@@ -237,7 +237,7 @@ typedef NS_ENUM(NSUInteger, ZXLSocketStatus){
                         break;
                     case 4000005://刷新JsonWebToken
                     {
-                        [ZXLHttpManager refreshToken];
+//                        [ZXLHttpManager refreshToken];
                     }
                         break;
                     case 200:

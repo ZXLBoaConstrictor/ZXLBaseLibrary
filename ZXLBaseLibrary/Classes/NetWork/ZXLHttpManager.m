@@ -9,6 +9,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ZXLUtilsDefined.h"
+#import "ZXLAccountManager.h"
 #import "ZXLAddressManager.h"
 #import "NSString+ZXLErrorCode.h"
 
@@ -26,10 +27,8 @@
 static dispatch_once_t pred = 0;
 __strong static AFHTTPSessionManager *  mainManager = nil;
 
-+(AFHTTPSessionManager *)httpSessionManager:(ZXLHttpServiceType)serviceType
-                           requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer{
++(AFHTTPSessionManager *)httpSessionManager:(ZXLHttpServiceType)serviceType{
     AFHTTPSessionManager * sessionManager = nil;
-
     if (serviceType == ZXLHttpMainPost || serviceType == ZXLHttpMainGet) {
         dispatch_once(&pred, ^{
             mainManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[ZXLAddressManager systemAddress:ZXLURLStr]]];
@@ -39,8 +38,7 @@ __strong static AFHTTPSessionManager *  mainManager = nil;
         });
         sessionManager =  mainManager;
     }
-
-    sessionManager.requestSerializer = requestSerializer;
+    
     NSString *strVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     if (sessionManager.requestSerializer && ZXLUtilsISNSStringValid(strVersion)) {
         [sessionManager.requestSerializer setValue:strVersion forHTTPHeaderField:@"IOSVersion"];
@@ -49,249 +47,107 @@ __strong static AFHTTPSessionManager *  mainManager = nil;
     return sessionManager;
 }
 
-+(void)attemptDealloc{
-    pred = 0;
-    mainManager = nil;
+
+/**
+   检测是否需要请求获取token
+ 
+ @return 检测结果
+ */
++(BOOL)checkRequestToken:(ZXLHttpServiceType)serviceType{
+    if (![ZXLAccountManager manager].isLogin) {
+        return NO;
+    }
+    
+    NSDate * expirationDate = [NSDate dateWithTimeIntervalSince1970:(NSTimeInterval)[ZXLHttpManager manager].tokenExpirationTimeInMilliSecond];
+    NSTimeInterval interval = [expirationDate timeIntervalSinceDate:[NSDate date]];
+    NSString *token = [ZXLAccountManager manager].token;
+    //距离超时时间5分钟重新获取token
+    if (interval < 5 * 60 || !ZXLUtilsISNSStringValid(token)) {
+        return YES;
+    }
+    return NO;
 }
 
 /**
  获取token
  
+ @param check 是否需要检测请求token
  @param serviceType 请求类型
- @param complete 返回结果
  */
-+(void)getToken:(ZXLHttpServiceType)serviceType complete:(void (^)(NSString * token))complete{
-    complete(@"");
-}
-
-+(void)checkAndRefreshToken{
-    [ZXLHttpManager getToken:ZXLHttpMainPost complete:^(NSString *token) {
-        
-    }];
-}
-
-+(void)refreshToken{
- 
-}
-
-/**
- 记录token 上一次刷新获取时间
- 
- @param nsAction 接口名称
- @param responseObject 返回数据
- */
-+(void)rememberTokenExpirationTimeInMilliSecond:(NSString *)nsAction responseObject:(id)responseObject{
-    if ([nsAction isEqualToString:@"login"] || [nsAction isEqualToString:@"jwt/refresh"]) {
-        if ([[responseObject objectForKey:ZXLResponseCode] integerValue] == 200) {
-            NSInteger timeInMilliSecond =  [[[responseObject objectForKey:@"result"] objectForKey:@"expires_in"] integerValue];
-            if (timeInMilliSecond > 0) {
-                [ZXLHttpManager manager].tokenExpirationTimeInMilliSecond = [[NSDate date] timeIntervalSince1970] + timeInMilliSecond;
++(void)requestToken:(ZXLHttpServiceType)serviceType check:(BOOL)check complete:(void (^)(NSString * token))complete{
+    if (check && ![ZXLHttpManager checkRequestToken:serviceType]) {
+        if (complete) {
+            complete([ZXLAccountManager manager].token);
+        }
+        return;
+    }
+    
+    NSString * refreshToken = [ZXLAccountManager manager].refreshToken;
+    refreshToken = ZXLUtilsISNSStringValid(refreshToken)?refreshToken:@"";
+    //接口获取token
+    AFHTTPSessionManager * pHttpMain = [ZXLHttpManager httpSessionManager:ZXLHttpMainPost];
+    [pHttpMain POST:@"jwt/refresh" parameters:@{@"refreshToken":refreshToken} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject objectForKey:ZXLResponseCode] == 200) {
+            [[ZXLAccountManager manager] setAccountData:[responseObject objectForKey:@"result"]];
+            if (complete) {
+                complete([ZXLAccountManager manager].token);
             }
         }
-    }
-}
-
-+(void)sendHttpRequest:(NSString *)apiName
-             parameter:(NSDictionary *)parameter
-              delegate:(id)delegate
-                  type:(ZXLHttpServiceType)serviceType{
-    [ZXLHttpManager sendHttpRequest:apiName
-                          parameter:parameter
-                           delegate:delegate
-                               type:serviceType
-                  requestSerializer:[AFHTTPRequestSerializer serializer]
-                            success:nil failure:nil];
-}
-
-+(void)sendHttpRequest:(NSString *)apiName
-             parameter:(NSDictionary *)parameter
-              delegate:(id)delegate
-                  type:(ZXLHttpServiceType)serviceType
-     requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer{
-    [ZXLHttpManager sendHttpRequest:apiName
-                          parameter:parameter
-                           delegate:delegate
-                               type:serviceType
-                  requestSerializer:requestSerializer
-                            success:nil failure:nil];
-}
-
-+(void)sendHttpRequest:(NSString *)apiName
-             parameter:(NSDictionary *)parameter
-                  type:(ZXLHttpServiceType)serviceType
-               success:(void (^)(NSURLSessionDataTask *task, id  responseObject))success
-               failure:(void (^)(NSURLSessionDataTask *  task, NSError *error))failure{
-    [ZXLHttpManager sendHttpRequest:apiName
-                          parameter:parameter
-                           delegate:nil
-                               type:serviceType
-                  requestSerializer:[AFHTTPRequestSerializer serializer]
-                            success:success
-                            failure:failure];
-}
-
-+(void)sendHttpRequest:(NSString *)apiName
-             parameter:(NSDictionary *)parameter
-                  type:(ZXLHttpServiceType)serviceType
-     requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer
-               success:(void (^)(NSURLSessionDataTask *task, id  responseObject))success
-               failure:(void (^)(NSURLSessionDataTask *  task, NSError *error))failure {
-    [ZXLHttpManager sendHttpRequest:apiName
-                          parameter:parameter
-                           delegate:nil
-                               type:serviceType
-                  requestSerializer:requestSerializer
-                            success:success
-                            failure:failure];
-}
-
-//请求判断过滤
-+(void)sendHttpRequest:(NSString *)apiName
-            parameter:(NSDictionary *)parameter
-           delegate:(id)delegate
-             type:(ZXLHttpServiceType)serviceType
-  requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer
-            success:(void (^)(NSURLSessionDataTask *task, id  responseObject))success
-            failure:(void (^)(NSURLSessionDataTask *  task, NSError *error))failure{
-    if (!ZXLUtilsISNSStringValid(apiName))
-        return;
-    
-    if (success == nil && failure == nil && delegate == nil) {
-        return;
-    }
-    
-    if (parameter == nil){
-        parameter = [NSMutableDictionary dictionary];
-    }
-    
-    [ZXLHttpManager getToken:serviceType complete:^(NSString *token) {
-        [ZXLHttpManager sendRequest:apiName
-                          parameter:parameter
-                           delegate:delegate
-                               type:serviceType
-                  requestSerializer:requestSerializer
-                            success:success
-                            failure:failure
-                              token:token];
+        else{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ZXLAccountLoginOut" object:@"帐户验证失败"];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error.code == NSURLErrorNotConnectedToInternet) {
+            [SVProgressHUD showErrorWithStatus:@"当前网络不可用，请检查网络设置"];
+        }else if (error.code == NSURLErrorTimedOut){
+            [SVProgressHUD showErrorWithStatus:@"网络请求超时"];
+        }else{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ZXLAccountLoginOut" object:@"帐户验证失败"];
+        }
     }];
 }
 
 + (void)sendRequest:(NSString *)apiName
           parameter:(NSDictionary *)parameter
-           delegate:(id)delegate
-               type:(ZXLHttpServiceType)serviceType
-  requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer
+        serviceType:(ZXLHttpServiceType)serviceType
+       requestToken:(NSString *)token
             success:(void (^)(NSURLSessionDataTask *task, id  responseObject))success
             failure:(void (^)(NSURLSessionDataTask *  task, NSError *error))failure
-              token:(NSString *)token
 {
-    AFHTTPSessionManager * pHttpMain = [ZXLHttpManager httpSessionManager:serviceType requestSerializer:requestSerializer];
+    AFHTTPSessionManager * pHttpMain = [ZXLHttpManager httpSessionManager:serviceType];
     [pHttpMain.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@",token] forHTTPHeaderField:@"Authorization"];
     if (serviceType == ZXLHttpMainPost){
-        [pHttpMain POST:apiName parameters:parameter progress:nil success:^(NSURLSessionDataTask * task, id  responseObject) {
-            if ([[responseObject objectForKey:ZXLResponseCode] integerValue] == 4000005) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"ZXLAccountLoginOut" object:@""];
-            }else{
-                if (success) {
-                    success(task,responseObject);
-                }else{
-                    NSMutableDictionary *pResponse = [NSMutableDictionary dictionary];
-                    if (responseObject && [responseObject isKindOfClass:[NSDictionary class]]) {
-                        [pResponse addEntriesFromDictionary:responseObject];
-                    }
-                    
-                    if ([[pResponse objectForKey:ZXLResponseCode] integerValue] == 200) {
-                        [ZXLHttpManager OnReceive:pResponse apiName:apiName result:YES delegate:delegate type:serviceType];
-                    }else{
-                        [ZXLHttpManager OnReceiveError:task error:responseObject apiName:apiName delegate:delegate type:serviceType];
-                    }
-                }
-            }
-        } failure:^(NSURLSessionDataTask * task, NSError * _Nonnull error) {
-            if (task.response && ((NSHTTPURLResponse *)task.response).statusCode == 403) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"ZXLAccountLoginOut" object:@""];
-            }else{
-                if (failure) {
-                    failure(task,error);
-                }else{
-                    [ZXLHttpManager OnReceiveError:task error:error apiName:apiName delegate:delegate type:serviceType];
-                }
-            }
-        }];
+        [pHttpMain POST:apiName parameters:parameter progress:nil success:success failure:failure];
     }
     
     if (serviceType == ZXLHttpMainGet){
-        [pHttpMain GET:apiName parameters:parameter progress:nil success:^(NSURLSessionDataTask *  task, id   responseObject) {
-            
-            if ([[responseObject objectForKey:ZXLResponseCode] integerValue] == 4000005) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"ZXLAccountLoginOut" object:@""];
-            }else{
-                if (success) {
-                    success(task,responseObject);
-                }else{
-                    NSMutableDictionary *pResponse = [NSMutableDictionary dictionary];
-                    if (responseObject && [responseObject isKindOfClass:[NSDictionary class]]) {
-                        [pResponse addEntriesFromDictionary:responseObject];
-                    }
-                    
-                    if ([[pResponse objectForKey:ZXLResponseCode] integerValue] == 200) {
-                        [ZXLHttpManager OnReceive:pResponse apiName:apiName result:YES delegate:delegate type:serviceType];
-                    }else{
-                        [ZXLHttpManager OnReceiveError:task error:responseObject apiName:apiName delegate:delegate type:serviceType];
-                    }
-                }
+        [pHttpMain GET:apiName parameters:parameter progress:nil success:success failure:failure];
+    }
+}
+
++(void)sendHttpRequest:(NSString *)apiName
+             parameter:(NSDictionary *)parameter
+           serviceType:(ZXLHttpServiceType)serviceType
+              complete:(void (^)(NSDictionary *response))complete{
+    if (!ZXLUtilsISNSStringValid(apiName))
+        return;
+    
+    if (parameter == nil){
+        parameter = [NSMutableDictionary dictionary];
+    }
+    
+    [ZXLHttpManager requestToken:serviceType check:YES complete:^(NSString *token) {
+        [ZXLHttpManager sendRequest:apiName parameter:parameter serviceType:serviceType requestToken:token success:^(NSURLSessionDataTask *task, id responseObject) {
+            if(complete){
+                complete(responseObject);
             }
-        } failure:^(NSURLSessionDataTask *  task, NSError * error) {
-            if (task.response && ((NSHTTPURLResponse *)task.response).statusCode == 403) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"ZXLAccountLoginOut" object:@""];
-            }else{
-                if (failure) {
-                    failure(task,error);
-                }else{
-                    [ZXLHttpManager OnReceiveError:task error:error apiName:apiName delegate:delegate type:serviceType];
-                }
-            }
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+            [ZXLHttpManager showFailureMessage:error message:@"接口请求错误"];
         }];
-    }
-}
-
-+(void)OnReceiveError:(NSURLSessionDataTask *)task error:(id)error apiName:(NSString *)apiName delegate:(id)delegate type:(ZXLHttpServiceType)serviceType{
-    NSMutableDictionary *pDict = [NSMutableDictionary dictionary];
-    NSString * strError = @"请求错误!";
-    if (error && [error isKindOfClass:[NSError class]]){
-        if (((NSError *)error).code == NSURLErrorNotConnectedToInternet) {
-            strError = @"当前网络不可用，请检查网络设置";
-        }else if (((NSError *)error).code == NSURLErrorTimedOut){
-            strError = @"网络请求超时";
-        }else if (((NSError *)error).code == NSURLErrorBadServerResponse){
-            strError = @"当前网络连接异常，请检查网络连接";
-        }else{
-            strError = @"当前网络连接异常，请检查网络连接";
-        }
-        [pDict setValue:@(((NSError *)error).code).stringValue forKey:@"errorCode"];
-        [pDict setValue:strError forKey:@"msg"];
-    }
-    
-    if (error && [error isKindOfClass:[NSDictionary class]]) {
-        [pDict addEntriesFromDictionary:(NSDictionary *)error];
-        NSString * strError = [NSString errorCodeToString:[[pDict objectForKey:ZXLResponseCode] integerValue]];
-        if (!ZXLUtilsISNSStringValid(strError)) {
-            strError =  [pDict objectForKey:ZXLResponseMessage];
-        }
-        [pDict setValue:strError forKey:ZXLResponseMessage];
-    }
-    
-    [ZXLHttpManager OnReceive:pDict apiName:apiName result:YES delegate:delegate type:serviceType];
+    }];
 }
 
 
-+(void)OnReceive:(NSMutableDictionary *)wParam apiName:(NSString *)apiName result:(BOOL)bResult delegate:(id<ZXLHttpManagerDelegate>)delegate type:(ZXLHttpServiceType)serviceType{
-    
-    if (delegate && [delegate respondsToSelector:@selector(OnReceive:complete:)]){
-        [wParam setValue:apiName forKey:@"apiName"];
-        [delegate OnReceive:wParam complete:bResult];
-    }
-}
 
 +(void)showErrorMessage:(NSDictionary *)parameter message:(NSString *)defaultMessage{
     [SVProgressHUD showErrorWithStatus:[NSString errorMessage:parameter message:defaultMessage]];
